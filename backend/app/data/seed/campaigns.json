@@ -1,0 +1,570 @@
+[
+ {
+  "id": "camp-2025-track-club",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Track Club Collection",
+  "product": "Club Kit",
+  "trend_name": "Track Club Fashion",
+  "trend_category": "style",
+  "launched_at": "2025-06-28",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 240000000.0,
+  "activation_lead_days": 8.0,
+  "predicted": {
+   "reach": 2256000,
+   "views": 3552000,
+   "engagement_rate": 0.0651,
+   "sentiment_positive_pct": 78.7,
+   "consideration_lift_pct": 5.74,
+   "performance_index": 80.38
+  },
+  "actual": {
+   "reach": 2450823,
+   "views": 3909560,
+   "engagement_rate": 0.0646,
+   "sentiment_positive_pct": 79.2,
+   "consideration_lift_pct": 6.21,
+   "performance_index": 86.93
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-celebrity_fitness-3",
+    "creator_name": "Hana Dunn",
+    "predicted_score": 80.0,
+    "actual_performance_index": 93.1,
+    "spend_usd": 60000000.0
+   },
+   {
+    "creator_id": "creator-wellness_recovery-1",
+    "creator_name": "Sami Osei",
+    "predicted_score": 76.0,
+    "actual_performance_index": 87.4,
+    "spend_usd": 60000000.0
+   },
+   {
+    "creator_id": "creator-wellness_recovery-2",
+    "creator_name": "Ines Ellis",
+    "predicted_score": 83.0,
+    "actual_performance_index": 75.4,
+    "spend_usd": 60000000.0
+   },
+   {
+    "creator_id": "creator-wellness_recovery-3",
+    "creator_name": "Nina Ellis",
+    "predicted_score": 85.9,
+    "actual_performance_index": 85.6,
+    "spend_usd": 60000000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 88,
+   "audience_fit": 83,
+   "brand_fit": 74,
+   "momentum": 86,
+   "proven_performance": 62
+  },
+  "portfolio_overlap_pct": 19.0,
+  "learnings": [
+   "Style-led creators drove the highest consideration lift to date.",
+   "Momentum was the signal that best predicted which creators overdelivered."
+  ]
+ },
+ {
+  "id": "camp-2024-trail-capsule",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Trail Capsule Launch",
+  "product": "Trail Capsule",
+  "trend_name": "Trail Running Resurgence",
+  "trend_category": "community_behaviour",
+  "launched_at": "2025-07-23",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 185000000.0,
+  "activation_lead_days": 11.0,
+  "predicted": {
+   "reach": 1739000,
+   "views": 2738000,
+   "engagement_rate": 0.0633,
+   "sentiment_positive_pct": 78.1,
+   "consideration_lift_pct": 5.24,
+   "performance_index": 73.3
+  },
+  "actual": {
+   "reach": 1715645,
+   "views": 2660914,
+   "engagement_rate": 0.0625,
+   "sentiment_positive_pct": 78.1,
+   "consideration_lift_pct": 5.23,
+   "performance_index": 73.2
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-run_community-1",
+    "creator_name": "Kofi Mensah",
+    "predicted_score": 79.8,
+    "actual_performance_index": 86.5,
+    "spend_usd": 61666666.67
+   },
+   {
+    "creator_id": "creator-run_community-2",
+    "creator_name": "Kira Brooks",
+    "predicted_score": 67.1,
+    "actual_performance_index": 67.9,
+    "spend_usd": 61666666.67
+   },
+   {
+    "creator_id": "creator-run_community-3",
+    "creator_name": "Lena Clark",
+    "predicted_score": 69.2,
+    "actual_performance_index": 67.5,
+    "spend_usd": 61666666.67
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 78,
+   "audience_fit": 72,
+   "brand_fit": 81,
+   "momentum": 64,
+   "proven_performance": 70
+  },
+  "portfolio_overlap_pct": 31.0,
+  "learnings": [
+   "Trail audience converted well but skewed older than target.",
+   "Long lead time meant we launched after the seasonal peak."
+  ]
+ },
+ {
+  "id": "camp-2026-spring-tempo",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Spring Tempo Drop",
+  "product": "Tempo 2",
+  "trend_name": "Speed Work Content",
+  "trend_category": "training_method",
+  "launched_at": "2025-09-03",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 225000000.0,
+  "activation_lead_days": 7.0,
+  "predicted": {
+   "reach": 2115000,
+   "views": 3330000,
+   "engagement_rate": 0.0642,
+   "sentiment_positive_pct": 78.4,
+   "consideration_lift_pct": 5.49,
+   "performance_index": 76.82
+  },
+  "actual": {
+   "reach": 2071505,
+   "views": 3407976,
+   "engagement_rate": 0.0643,
+   "sentiment_positive_pct": 78.3,
+   "consideration_lift_pct": 5.43,
+   "performance_index": 75.99
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-athleisure_style-3",
+    "creator_name": "Kofi Fontaine",
+    "predicted_score": 71.1,
+    "actual_performance_index": 82.8,
+    "spend_usd": 56250000.0
+   },
+   {
+    "creator_id": "creator-athleisure_style-4",
+    "creator_name": "Omar Boateng",
+    "predicted_score": 69.6,
+    "actual_performance_index": 73.9,
+    "spend_usd": 56250000.0
+   },
+   {
+    "creator_id": "creator-athleisure_style-5",
+    "creator_name": "Priya Nolan",
+    "predicted_score": 68.2,
+    "actual_performance_index": 76.0,
+    "spend_usd": 56250000.0
+   },
+   {
+    "creator_id": "creator-marathon_coach-1",
+    "creator_name": "Yara Sato",
+    "predicted_score": 75.3,
+    "actual_performance_index": 77.8,
+    "spend_usd": 56250000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 86,
+   "audience_fit": 77,
+   "brand_fit": 72,
+   "momentum": 82,
+   "proven_performance": 58
+  },
+  "portfolio_overlap_pct": 21.0,
+  "learnings": [
+   "Fastest activation we have run, and it showed in the results.",
+   "Creators new to us outperformed repeat partners."
+  ]
+ },
+ {
+  "id": "camp-2024-city-half",
+  "brand_id": "brand-momentum-athletics",
+  "name": "City Half Marathon Push",
+  "product": "Tempo Racer",
+  "trend_name": "Half Marathon Boom",
+  "trend_category": "community_behaviour",
+  "launched_at": "2025-09-19",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 210000000.0,
+  "activation_lead_days": 9.5,
+  "predicted": {
+   "reach": 1974000,
+   "views": 3108000,
+   "engagement_rate": 0.0644,
+   "sentiment_positive_pct": 78.5,
+   "consideration_lift_pct": 5.54,
+   "performance_index": 77.56
+  },
+  "actual": {
+   "reach": 2324315,
+   "views": 3590269,
+   "engagement_rate": 0.0697,
+   "sentiment_positive_pct": 79.2,
+   "consideration_lift_pct": 6.15,
+   "performance_index": 86.09
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-run_community-5",
+    "creator_name": "Noor Idris",
+    "predicted_score": 89.2,
+    "actual_performance_index": 61.6,
+    "spend_usd": 70000000.0
+   },
+   {
+    "creator_id": "creator-fitness_lifestyle-1",
+    "creator_name": "Camille Osei",
+    "predicted_score": 87.3,
+    "actual_performance_index": 71.8,
+    "spend_usd": 70000000.0
+   },
+   {
+    "creator_id": "creator-fitness_lifestyle-2",
+    "creator_name": "Adaeze Dunn",
+    "predicted_score": 73.2,
+    "actual_performance_index": 76.1,
+    "spend_usd": 70000000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 84,
+   "audience_fit": 79,
+   "brand_fit": 77,
+   "momentum": 76,
+   "proven_performance": 66
+  },
+  "portfolio_overlap_pct": 24.0,
+  "learnings": [
+   "Race-adjacent content outperformed studio content by a wide margin.",
+   "Mid-tier creators beat the one large creator on cost per engaged view."
+  ]
+ },
+ {
+  "id": "camp-2025-recovery-line",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Recovery Line",
+  "product": "Recovery Range",
+  "trend_name": "Recovery Culture",
+  "trend_category": "wellness",
+  "launched_at": "2025-10-20",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 175000000.0,
+  "activation_lead_days": 9.5,
+  "predicted": {
+   "reach": 1645000,
+   "views": 2590000,
+   "engagement_rate": 0.0642,
+   "sentiment_positive_pct": 78.4,
+   "consideration_lift_pct": 5.48,
+   "performance_index": 76.67
+  },
+  "actual": {
+   "reach": 1516305,
+   "views": 2339654,
+   "engagement_rate": 0.0614,
+   "sentiment_positive_pct": 78.1,
+   "consideration_lift_pct": 5.23,
+   "performance_index": 73.28
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-wellness_recovery-4",
+    "creator_name": "Uma Mensah",
+    "predicted_score": 74.7,
+    "actual_performance_index": 76.2,
+    "spend_usd": 35000000.0
+   },
+   {
+    "creator_id": "creator-wellness_recovery-5",
+    "creator_name": "Bex Dunn",
+    "predicted_score": 75.3,
+    "actual_performance_index": 84.4,
+    "spend_usd": 35000000.0
+   },
+   {
+    "creator_id": "creator-athleisure_style-1",
+    "creator_name": "Greta Diallo",
+    "predicted_score": 75.5,
+    "actual_performance_index": 74.7,
+    "spend_usd": 35000000.0
+   },
+   {
+    "creator_id": "creator-athleisure_style-2",
+    "creator_name": "Yara Holt",
+    "predicted_score": 81.4,
+    "actual_performance_index": 86.1,
+    "spend_usd": 35000000.0
+   },
+   {
+    "creator_id": "creator-athleisure_style-3",
+    "creator_name": "Kofi Fontaine",
+    "predicted_score": 77.3,
+    "actual_performance_index": 78.5,
+    "spend_usd": 35000000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 74,
+   "audience_fit": 86,
+   "brand_fit": 84,
+   "momentum": 61,
+   "proven_performance": 80
+  },
+  "portfolio_overlap_pct": 22.0,
+  "learnings": [
+   "Audience fit carried this one; the product was niche but well targeted.",
+   "Creators with prior results underdelivered relative to their scores."
+  ]
+ },
+ {
+  "id": "camp-2025-winter-layer",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Winter Layer System",
+  "product": "Thermal Layer",
+  "trend_name": "Cold Weather Running",
+  "trend_category": "seasonal_product",
+  "launched_at": "2025-12-02",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 160000000.0,
+  "activation_lead_days": 12.0,
+  "predicted": {
+   "reach": 1504000,
+   "views": 2368000,
+   "engagement_rate": 0.0621,
+   "sentiment_positive_pct": 77.7,
+   "consideration_lift_pct": 4.89,
+   "performance_index": 68.5
+  },
+  "actual": {
+   "reach": 1516737,
+   "views": 2221965,
+   "engagement_rate": 0.0592,
+   "sentiment_positive_pct": 77.5,
+   "consideration_lift_pct": 4.69,
+   "performance_index": 65.59
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-fitness_lifestyle-4",
+    "creator_name": "Nina Idris",
+    "predicted_score": 76.9,
+    "actual_performance_index": 64.4,
+    "spend_usd": 40000000.0
+   },
+   {
+    "creator_id": "creator-fitness_lifestyle-5",
+    "creator_name": "Zeke Vance",
+    "predicted_score": 67.7,
+    "actual_performance_index": 58.9,
+    "spend_usd": 40000000.0
+   },
+   {
+    "creator_id": "creator-celebrity_fitness-1",
+    "creator_name": "Imani Calder",
+    "predicted_score": 63.5,
+    "actual_performance_index": 73.8,
+    "spend_usd": 40000000.0
+   },
+   {
+    "creator_id": "creator-celebrity_fitness-2",
+    "creator_name": "Sofia Dunn",
+    "predicted_score": 72.0,
+    "actual_performance_index": 64.1,
+    "spend_usd": 40000000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 66,
+   "audience_fit": 68,
+   "brand_fit": 88,
+   "momentum": 52,
+   "proven_performance": 74
+  },
+  "portfolio_overlap_pct": 38.0,
+  "learnings": [
+   "Strong brand fit did not rescue weak topical momentum.",
+   "Overlap was too high \u2014 three creators reached the same audience."
+  ]
+ },
+ {
+  "id": "camp-2026-summer-singlet",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Summer Singlet",
+  "product": "Featherweight Singlet",
+  "trend_name": "Hot Weather Training",
+  "trend_category": "seasonal_product",
+  "launched_at": "2026-01-07",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 150000000.0,
+  "activation_lead_days": 9.0,
+  "predicted": {
+   "reach": 1410000,
+   "views": 2220000,
+   "engagement_rate": 0.0626,
+   "sentiment_positive_pct": 77.9,
+   "consideration_lift_pct": 5.03,
+   "performance_index": 70.43
+  },
+  "actual": {
+   "reach": 1455049,
+   "views": 2139209,
+   "engagement_rate": 0.0619,
+   "sentiment_positive_pct": 77.9,
+   "consideration_lift_pct": 5.07,
+   "performance_index": 71.04
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-run_vlogger-1",
+    "creator_name": "Uma Farah",
+    "predicted_score": 69.8,
+    "actual_performance_index": 76.2,
+    "spend_usd": 37500000.0
+   },
+   {
+    "creator_id": "creator-run_vlogger-2",
+    "creator_name": "Joss Novak",
+    "predicted_score": 76.9,
+    "actual_performance_index": 63.3,
+    "spend_usd": 37500000.0
+   },
+   {
+    "creator_id": "creator-run_vlogger-3",
+    "creator_name": "Xan Sato",
+    "predicted_score": 68.1,
+    "actual_performance_index": 67.6,
+    "spend_usd": 37500000.0
+   },
+   {
+    "creator_id": "creator-run_vlogger-4",
+    "creator_name": "Tasha Vance",
+    "predicted_score": 72.7,
+    "actual_performance_index": 68.7,
+    "spend_usd": 37500000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 70,
+   "audience_fit": 71,
+   "brand_fit": 79,
+   "momentum": 58,
+   "proven_performance": 77
+  },
+  "portfolio_overlap_pct": 29.0,
+  "learnings": [
+   "Launched two weeks after the heat wave broke \u2014 timing cost us.",
+   "Confirms that momentum at launch matters more than creator size."
+  ]
+ },
+ {
+  "id": "camp-2026-run-club-pilot",
+  "brand_id": "brand-momentum-athletics",
+  "name": "Run Club Pilot",
+  "product": "Club Singlet",
+  "trend_name": "Social Running Clubs",
+  "trend_category": "community_behaviour",
+  "launched_at": "2026-02-20",
+  "objective": "Awareness + consideration",
+  "audience_summary": "Women 18-30, US",
+  "spend_usd": 95000000.0,
+  "activation_lead_days": 6.0,
+  "predicted": {
+   "reach": 893000,
+   "views": 1406000,
+   "engagement_rate": 0.0661,
+   "sentiment_positive_pct": 79.0,
+   "consideration_lift_pct": 6.02,
+   "performance_index": 84.23
+  },
+  "actual": {
+   "reach": 929986,
+   "views": 1590701,
+   "engagement_rate": 0.07,
+   "sentiment_positive_pct": 79.4,
+   "consideration_lift_pct": 6.34,
+   "performance_index": 88.73
+  },
+  "creator_results": [
+   {
+    "creator_id": "creator-marathon_coach-2",
+    "creator_name": "Kira Farah",
+    "predicted_score": 72.5,
+    "actual_performance_index": 85.7,
+    "spend_usd": 19000000.0
+   },
+   {
+    "creator_id": "creator-marathon_coach-3",
+    "creator_name": "Dani Haddad",
+    "predicted_score": 81.0,
+    "actual_performance_index": 84.6,
+    "spend_usd": 19000000.0
+   },
+   {
+    "creator_id": "creator-marathon_coach-4",
+    "creator_name": "Kofi Bergman",
+    "predicted_score": 92.8,
+    "actual_performance_index": 80.9,
+    "spend_usd": 19000000.0
+   },
+   {
+    "creator_id": "creator-marathon_coach-5",
+    "creator_name": "Greta Nolan",
+    "predicted_score": 72.3,
+    "actual_performance_index": 88.0,
+    "spend_usd": 19000000.0
+   },
+   {
+    "creator_id": "creator-run_vlogger-1",
+    "creator_name": "Uma Farah",
+    "predicted_score": 83.8,
+    "actual_performance_index": 85.7,
+    "spend_usd": 19000000.0
+   }
+  ],
+  "signal_snapshot": {
+   "content_fit": 92,
+   "audience_fit": 88,
+   "brand_fit": 86,
+   "momentum": 90,
+   "proven_performance": 55
+  },
+  "portfolio_overlap_pct": 17.0,
+  "learnings": [
+   "Small budget, best efficiency of any campaign in the ledger.",
+   "Community creators with no prior brand history were the top performers."
+  ]
+ }
+]

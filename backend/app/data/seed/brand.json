@@ -1,0 +1,20 @@
+{
+ "id": "brand-momentum-athletics",
+ "name": "Momentum Athletics",
+ "industry": "Athletic apparel and footwear",
+ "values": [
+  "community over hero worship",
+  "performance without elitism",
+  "inclusive by default",
+  "built to be used, not displayed"
+ ],
+ "positioning": "Technical running product for people who came to running through other people. We sponsor the group run, not the podium.",
+ "default_niche": "women's running and athletic apparel",
+ "brand_safety_requirements": [
+  "no extreme-deficit or restrictive-diet content",
+  "no unlicensed supplement promotion",
+  "no body-transformation before/after framing"
+ ],
+ "avg_activation_lead_days": 9.0,
+ "fastest_activation_lead_days": 6.0
+}

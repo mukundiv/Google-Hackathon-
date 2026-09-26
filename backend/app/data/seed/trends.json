@@ -1,0 +1,6116 @@
+[
+ {
+  "id": "trend-social-running-clubs",
+  "name": "Social Running Clubs",
+  "description": "Run clubs have shifted from training groups to social infrastructure \u2014 people join to meet people, and the run is the excuse. City-level clubs are spawning weekly, with post-run coffee as the actual product.",
+  "why_now": "Club formation and 'join a run club' intent are both climbing fast and have not peaked. Content in this space is community-led, so credibility beats production value \u2014 brands can enter without feeling like an ad.",
+  "niche": "women's running and athletic apparel",
+  "category": "community_behaviour",
+  "query_terms": [
+   "run club",
+   "social running club",
+   "running community",
+   "run club london"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "Run clubs are the new dating app",
+    "url": "https://www.theguardian.com/lifeandstyle/run-clubs-social",
+    "publisher": "Guardian",
+    "snippet": "Attendance at urban run clubs has roughly tripled year on year, with organisers reporting that social motivation now outranks fitness goals."
+   },
+   {
+    "title": "The rise of the social run club",
+    "url": "https://www.runnersworld.com/news/social-run-club-boom",
+    "publisher": "Runner's World",
+    "snippet": "New club registrations are up sharply, concentrated in the 18-30 bracket and skewing female for the first time."
+   },
+   {
+    "title": "Why brands are showing up at run clubs",
+    "url": "https://www.businessoffashion.com/articles/marketing/run-club-brand-activation",
+    "publisher": "Business of Fashion",
+    "snippet": "Athletic brands are moving budget from stadium sponsorship toward neighbourhood run club partnerships."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.06
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.03
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.05
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.41
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.04
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.09
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.43
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.11
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.37
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.61
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.22
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.22
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.32
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.34
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.69
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.57
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.06
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.28
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.03
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.29
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.64
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.39
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.21
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.19
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.07
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.63
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.52
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.01
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.21
+   },
+   {
+    "day": "2026-05-30",
+    "value": 1.14
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.37
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.07
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.08
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.31
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.42
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.54
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.06
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.43
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.66
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.17
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.23
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.33
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.55
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.47
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.24
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.46
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.04
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.06
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.19
+   },
+   {
+    "day": "2026-07-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.05
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.19
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.41
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.08
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.16
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.34
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-12",
+    "value": 0.13
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.07
+   },
+   {
+    "day": "2026-07-14",
+    "value": 0.65
+   },
+   {
+    "day": "2026-07-15",
+    "value": 0.45
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.05
+   },
+   {
+    "day": "2026-07-17",
+    "value": 1.01
+   },
+   {
+    "day": "2026-07-18",
+    "value": 0.16
+   },
+   {
+    "day": "2026-07-19",
+    "value": 0.27
+   },
+   {
+    "day": "2026-07-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-21",
+    "value": 0.76
+   },
+   {
+    "day": "2026-07-22",
+    "value": 0.01
+   },
+   {
+    "day": "2026-07-23",
+    "value": 1.21
+   },
+   {
+    "day": "2026-07-24",
+    "value": 0.58
+   },
+   {
+    "day": "2026-07-25",
+    "value": 1.32
+   },
+   {
+    "day": "2026-07-26",
+    "value": 1.84
+   },
+   {
+    "day": "2026-07-27",
+    "value": 0.91
+   },
+   {
+    "day": "2026-07-28",
+    "value": 0.94
+   },
+   {
+    "day": "2026-07-29",
+    "value": 1.59
+   },
+   {
+    "day": "2026-07-30",
+    "value": 0.85
+   },
+   {
+    "day": "2026-07-31",
+    "value": 1.27
+   },
+   {
+    "day": "2026-08-01",
+    "value": 2.02
+   },
+   {
+    "day": "2026-08-02",
+    "value": 1.51
+   },
+   {
+    "day": "2026-08-03",
+    "value": 2.6
+   },
+   {
+    "day": "2026-08-04",
+    "value": 2.75
+   },
+   {
+    "day": "2026-08-05",
+    "value": 3.26
+   },
+   {
+    "day": "2026-08-06",
+    "value": 2.65
+   },
+   {
+    "day": "2026-08-07",
+    "value": 3.37
+   },
+   {
+    "day": "2026-08-08",
+    "value": 2.69
+   },
+   {
+    "day": "2026-08-09",
+    "value": 3.88
+   },
+   {
+    "day": "2026-08-10",
+    "value": 4.4
+   },
+   {
+    "day": "2026-08-11",
+    "value": 3.18
+   },
+   {
+    "day": "2026-08-12",
+    "value": 4.76
+   },
+   {
+    "day": "2026-08-13",
+    "value": 4.62
+   },
+   {
+    "day": "2026-08-14",
+    "value": 4.99
+   },
+   {
+    "day": "2026-08-15",
+    "value": 5.74
+   },
+   {
+    "day": "2026-08-16",
+    "value": 5.99
+   },
+   {
+    "day": "2026-08-17",
+    "value": 6.93
+   },
+   {
+    "day": "2026-08-18",
+    "value": 7.17
+   },
+   {
+    "day": "2026-08-19",
+    "value": 7.38
+   },
+   {
+    "day": "2026-08-20",
+    "value": 8.46
+   },
+   {
+    "day": "2026-08-21",
+    "value": 9.25
+   },
+   {
+    "day": "2026-08-22",
+    "value": 10.53
+   },
+   {
+    "day": "2026-08-23",
+    "value": 9.87
+   },
+   {
+    "day": "2026-08-24",
+    "value": 10.72
+   },
+   {
+    "day": "2026-08-25",
+    "value": 12.86
+   },
+   {
+    "day": "2026-08-26",
+    "value": 13.24
+   },
+   {
+    "day": "2026-08-27",
+    "value": 15.3
+   },
+   {
+    "day": "2026-08-28",
+    "value": 14.73
+   },
+   {
+    "day": "2026-08-29",
+    "value": 14.93
+   },
+   {
+    "day": "2026-08-30",
+    "value": 18.1
+   },
+   {
+    "day": "2026-08-31",
+    "value": 17.7
+   },
+   {
+    "day": "2026-09-01",
+    "value": 19.46
+   },
+   {
+    "day": "2026-09-02",
+    "value": 19.22
+   },
+   {
+    "day": "2026-09-03",
+    "value": 23.88
+   },
+   {
+    "day": "2026-09-04",
+    "value": 20.84
+   },
+   {
+    "day": "2026-09-05",
+    "value": 23.94
+   },
+   {
+    "day": "2026-09-06",
+    "value": 28.41
+   },
+   {
+    "day": "2026-09-07",
+    "value": 27.91
+   },
+   {
+    "day": "2026-09-08",
+    "value": 32.25
+   },
+   {
+    "day": "2026-09-09",
+    "value": 30.45
+   },
+   {
+    "day": "2026-09-10",
+    "value": 31.94
+   },
+   {
+    "day": "2026-09-11",
+    "value": 31.32
+   },
+   {
+    "day": "2026-09-12",
+    "value": 40.42
+   },
+   {
+    "day": "2026-09-13",
+    "value": 42.11
+   },
+   {
+    "day": "2026-09-14",
+    "value": 47.06
+   },
+   {
+    "day": "2026-09-15",
+    "value": 45.14
+   },
+   {
+    "day": "2026-09-16",
+    "value": 46.06
+   },
+   {
+    "day": "2026-09-17",
+    "value": 48.29
+   },
+   {
+    "day": "2026-09-18",
+    "value": 50.0
+   },
+   {
+    "day": "2026-09-19",
+    "value": 49.63
+   },
+   {
+    "day": "2026-09-20",
+    "value": 55.92
+   },
+   {
+    "day": "2026-09-21",
+    "value": 52.33
+   },
+   {
+    "day": "2026-09-22",
+    "value": 54.93
+   },
+   {
+    "day": "2026-09-23",
+    "value": 61.12
+   },
+   {
+    "day": "2026-09-24",
+    "value": 57.61
+   },
+   {
+    "day": "2026-09-25",
+    "value": 66.42
+   },
+   {
+    "day": "2026-09-26",
+    "value": 67.23
+   }
+  ],
+  "_truth": {
+   "days_to_peak": 12,
+   "ttl_days": 22.08,
+   "peak_value": 84.82,
+   "params": {
+    "L": 99.7889,
+    "k": 0.085,
+    "t0": -8.4071,
+    "tau": 11.0
+   }
+  }
+ },
+ {
+  "id": "trend-strava-wrapped",
+  "name": "Strava Wrapped",
+  "description": "The annual year-in-review recap moment, where athletes share their yearly mileage cards across social. Enormous spike, extremely short tail.",
+  "why_now": "This one has already peaked. The recap cycle has passed its sharing window and conversation is decaying quickly \u2014 the engine flags it as a trap rather than an opportunity.",
+  "niche": "women's running and athletic apparel",
+  "category": "seasonal_product",
+  "query_terms": [
+   "strava wrapped",
+   "year in sport",
+   "strava recap"
+  ],
+  "seasonal": true,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "Strava's Year in Sport lands",
+    "url": "https://www.strava.com/press/year-in-sport",
+    "publisher": "Strava",
+    "snippet": "The annual recap drove a record single-day sharing spike before returning to baseline within two weeks."
+   },
+   {
+    "title": "Why recap marketing has a two-week shelf life",
+    "url": "https://digiday.com/marketing/recap-season-shelf-life",
+    "publisher": "Digiday",
+    "snippet": "Recap formats concentrate nearly all engagement into a 10-day window, making late entry effectively worthless."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.06
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.29
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.05
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.01
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.1
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.28
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.1
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.54
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.53
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.33
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.57
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.16
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.13
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.38
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.03
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.34
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.06
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.38
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.26
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.56
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.69
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.58
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.2
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.79
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.38
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.6
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.39
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.31
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.18
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.15
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.38
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.13
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.2
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.52
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.43
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.06
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.09
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.55
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.41
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.56
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.46
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.09
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.86
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.36
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.33
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-14",
+    "value": 0.72
+   },
+   {
+    "day": "2026-07-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-17",
+    "value": 0.09
+   },
+   {
+    "day": "2026-07-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-19",
+    "value": 0.03
+   },
+   {
+    "day": "2026-07-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-21",
+    "value": 0.75
+   },
+   {
+    "day": "2026-07-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-24",
+    "value": 0.17
+   },
+   {
+    "day": "2026-07-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-26",
+    "value": 0.61
+   },
+   {
+    "day": "2026-07-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-29",
+    "value": 0.18
+   },
+   {
+    "day": "2026-07-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-01",
+    "value": 0.82
+   },
+   {
+    "day": "2026-08-02",
+    "value": 0.05
+   },
+   {
+    "day": "2026-08-03",
+    "value": 0.12
+   },
+   {
+    "day": "2026-08-04",
+    "value": 0.35
+   },
+   {
+    "day": "2026-08-05",
+    "value": 0.44
+   },
+   {
+    "day": "2026-08-06",
+    "value": 0.18
+   },
+   {
+    "day": "2026-08-07",
+    "value": 0.34
+   },
+   {
+    "day": "2026-08-08",
+    "value": 0.4
+   },
+   {
+    "day": "2026-08-09",
+    "value": 0.12
+   },
+   {
+    "day": "2026-08-10",
+    "value": 0.22
+   },
+   {
+    "day": "2026-08-11",
+    "value": 0.03
+   },
+   {
+    "day": "2026-08-12",
+    "value": 0.1
+   },
+   {
+    "day": "2026-08-13",
+    "value": 0.05
+   },
+   {
+    "day": "2026-08-14",
+    "value": 0.84
+   },
+   {
+    "day": "2026-08-15",
+    "value": 0.76
+   },
+   {
+    "day": "2026-08-16",
+    "value": 1.46
+   },
+   {
+    "day": "2026-08-17",
+    "value": 1.37
+   },
+   {
+    "day": "2026-08-18",
+    "value": 1.37
+   },
+   {
+    "day": "2026-08-19",
+    "value": 1.43
+   },
+   {
+    "day": "2026-08-20",
+    "value": 2.24
+   },
+   {
+    "day": "2026-08-21",
+    "value": 2.58
+   },
+   {
+    "day": "2026-08-22",
+    "value": 2.65
+   },
+   {
+    "day": "2026-08-23",
+    "value": 2.97
+   },
+   {
+    "day": "2026-08-24",
+    "value": 4.29
+   },
+   {
+    "day": "2026-08-25",
+    "value": 4.82
+   },
+   {
+    "day": "2026-08-26",
+    "value": 5.8
+   },
+   {
+    "day": "2026-08-27",
+    "value": 7.68
+   },
+   {
+    "day": "2026-08-28",
+    "value": 9.55
+   },
+   {
+    "day": "2026-08-29",
+    "value": 11.7
+   },
+   {
+    "day": "2026-08-30",
+    "value": 13.42
+   },
+   {
+    "day": "2026-08-31",
+    "value": 13.62
+   },
+   {
+    "day": "2026-09-01",
+    "value": 18.01
+   },
+   {
+    "day": "2026-09-02",
+    "value": 20.95
+   },
+   {
+    "day": "2026-09-03",
+    "value": 25.54
+   },
+   {
+    "day": "2026-09-04",
+    "value": 29.84
+   },
+   {
+    "day": "2026-09-05",
+    "value": 34.38
+   },
+   {
+    "day": "2026-09-06",
+    "value": 42.06
+   },
+   {
+    "day": "2026-09-07",
+    "value": 42.64
+   },
+   {
+    "day": "2026-09-08",
+    "value": 44.55
+   },
+   {
+    "day": "2026-09-09",
+    "value": 56.09
+   },
+   {
+    "day": "2026-09-10",
+    "value": 56.44
+   },
+   {
+    "day": "2026-09-11",
+    "value": 59.62
+   },
+   {
+    "day": "2026-09-12",
+    "value": 69.19
+   },
+   {
+    "day": "2026-09-13",
+    "value": 76.77
+   },
+   {
+    "day": "2026-09-14",
+    "value": 72.73
+   },
+   {
+    "day": "2026-09-15",
+    "value": 67.67
+   },
+   {
+    "day": "2026-09-16",
+    "value": 79.13
+   },
+   {
+    "day": "2026-09-17",
+    "value": 80.09
+   },
+   {
+    "day": "2026-09-18",
+    "value": 72.14
+   },
+   {
+    "day": "2026-09-19",
+    "value": 74.08
+   },
+   {
+    "day": "2026-09-20",
+    "value": 77.74
+   },
+   {
+    "day": "2026-09-21",
+    "value": 67.64
+   },
+   {
+    "day": "2026-09-22",
+    "value": 68.43
+   },
+   {
+    "day": "2026-09-23",
+    "value": 59.06
+   },
+   {
+    "day": "2026-09-24",
+    "value": 58.52
+   },
+   {
+    "day": "2026-09-25",
+    "value": 60.12
+   },
+   {
+    "day": "2026-09-26",
+    "value": 53.14
+   }
+  ],
+  "_truth": {
+   "days_to_peak": -9,
+   "ttl_days": 4.74,
+   "peak_value": 82.89,
+   "params": {
+    "L": 97.5141,
+    "k": 0.2,
+    "t0": -17.673,
+    "tau": 15.0
+   }
+  }
+ },
+ {
+  "id": "trend-hybrid-training",
+  "name": "Hybrid Training",
+  "description": "Runners lifting and lifters running. The single-discipline identity is dissolving in favour of combined strength-and-endurance programming.",
+  "why_now": "Steady, non-seasonal climb with a long runway and no peak in sight yet.",
+  "niche": "women's running and athletic apparel",
+  "category": "training_method",
+  "query_terms": [
+   "hybrid training",
+   "run and lift",
+   "hybrid athlete",
+   "strength for runners"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "The hybrid athlete takes over",
+    "url": "https://www.outsideonline.com/health/training/hybrid-athlete-trend",
+    "publisher": "Outside",
+    "snippet": "Combined strength-endurance programming is the fastest growing category in coaching apps."
+   },
+   {
+    "title": "Runners are finally lifting",
+    "url": "https://www.womenshealthmag.com/fitness/hybrid-training-runners",
+    "publisher": "Women's Health",
+    "snippet": "Search interest in strength work for runners has doubled, led by women under 30."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.24
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.04
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.1
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.42
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.05
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.17
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.32
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.11
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.5
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.83
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.85
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.21
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.06
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.42
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.43
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.29
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.24
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.01
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.09
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.68
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.38
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.33
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.24
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.14
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.28
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.3
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.26
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.22
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.2
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.18
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.5
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.35
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.23
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.16
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.41
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.18
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.07
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.38
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.41
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.77
+   },
+   {
+    "day": "2026-06-14",
+    "value": 1.18
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.13
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.09
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.32
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.42
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.43
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.34
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.61
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.99
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.67
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.52
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.37
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.98
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.93
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.47
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.85
+   },
+   {
+    "day": "2026-07-02",
+    "value": 1.25
+   },
+   {
+    "day": "2026-07-03",
+    "value": 1.44
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.94
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.48
+   },
+   {
+    "day": "2026-07-06",
+    "value": 1.16
+   },
+   {
+    "day": "2026-07-07",
+    "value": 1.79
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.58
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.72
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.59
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.45
+   },
+   {
+    "day": "2026-07-12",
+    "value": 1.37
+   },
+   {
+    "day": "2026-07-13",
+    "value": 1.53
+   },
+   {
+    "day": "2026-07-14",
+    "value": 1.1
+   },
+   {
+    "day": "2026-07-15",
+    "value": 1.83
+   },
+   {
+    "day": "2026-07-16",
+    "value": 1.45
+   },
+   {
+    "day": "2026-07-17",
+    "value": 2.08
+   },
+   {
+    "day": "2026-07-18",
+    "value": 1.61
+   },
+   {
+    "day": "2026-07-19",
+    "value": 1.54
+   },
+   {
+    "day": "2026-07-20",
+    "value": 1.67
+   },
+   {
+    "day": "2026-07-21",
+    "value": 2.0
+   },
+   {
+    "day": "2026-07-22",
+    "value": 1.87
+   },
+   {
+    "day": "2026-07-23",
+    "value": 1.57
+   },
+   {
+    "day": "2026-07-24",
+    "value": 2.4
+   },
+   {
+    "day": "2026-07-25",
+    "value": 2.28
+   },
+   {
+    "day": "2026-07-26",
+    "value": 3.35
+   },
+   {
+    "day": "2026-07-27",
+    "value": 3.35
+   },
+   {
+    "day": "2026-07-28",
+    "value": 3.53
+   },
+   {
+    "day": "2026-07-29",
+    "value": 2.99
+   },
+   {
+    "day": "2026-07-30",
+    "value": 3.46
+   },
+   {
+    "day": "2026-07-31",
+    "value": 3.12
+   },
+   {
+    "day": "2026-08-01",
+    "value": 3.46
+   },
+   {
+    "day": "2026-08-02",
+    "value": 4.63
+   },
+   {
+    "day": "2026-08-03",
+    "value": 5.48
+   },
+   {
+    "day": "2026-08-04",
+    "value": 6.06
+   },
+   {
+    "day": "2026-08-05",
+    "value": 5.05
+   },
+   {
+    "day": "2026-08-06",
+    "value": 5.86
+   },
+   {
+    "day": "2026-08-07",
+    "value": 5.23
+   },
+   {
+    "day": "2026-08-08",
+    "value": 6.88
+   },
+   {
+    "day": "2026-08-09",
+    "value": 6.33
+   },
+   {
+    "day": "2026-08-10",
+    "value": 8.52
+   },
+   {
+    "day": "2026-08-11",
+    "value": 6.83
+   },
+   {
+    "day": "2026-08-12",
+    "value": 7.63
+   },
+   {
+    "day": "2026-08-13",
+    "value": 8.54
+   },
+   {
+    "day": "2026-08-14",
+    "value": 7.34
+   },
+   {
+    "day": "2026-08-15",
+    "value": 7.86
+   },
+   {
+    "day": "2026-08-16",
+    "value": 10.5
+   },
+   {
+    "day": "2026-08-17",
+    "value": 10.79
+   },
+   {
+    "day": "2026-08-18",
+    "value": 9.39
+   },
+   {
+    "day": "2026-08-19",
+    "value": 11.85
+   },
+   {
+    "day": "2026-08-20",
+    "value": 12.37
+   },
+   {
+    "day": "2026-08-21",
+    "value": 11.94
+   },
+   {
+    "day": "2026-08-22",
+    "value": 11.4
+   },
+   {
+    "day": "2026-08-23",
+    "value": 12.73
+   },
+   {
+    "day": "2026-08-24",
+    "value": 14.52
+   },
+   {
+    "day": "2026-08-25",
+    "value": 14.57
+   },
+   {
+    "day": "2026-08-26",
+    "value": 16.5
+   },
+   {
+    "day": "2026-08-27",
+    "value": 16.84
+   },
+   {
+    "day": "2026-08-28",
+    "value": 19.16
+   },
+   {
+    "day": "2026-08-29",
+    "value": 15.45
+   },
+   {
+    "day": "2026-08-30",
+    "value": 19.56
+   },
+   {
+    "day": "2026-08-31",
+    "value": 19.73
+   },
+   {
+    "day": "2026-09-01",
+    "value": 19.67
+   },
+   {
+    "day": "2026-09-02",
+    "value": 21.8
+   },
+   {
+    "day": "2026-09-03",
+    "value": 20.52
+   },
+   {
+    "day": "2026-09-04",
+    "value": 25.31
+   },
+   {
+    "day": "2026-09-05",
+    "value": 26.33
+   },
+   {
+    "day": "2026-09-06",
+    "value": 22.99
+   },
+   {
+    "day": "2026-09-07",
+    "value": 27.78
+   },
+   {
+    "day": "2026-09-08",
+    "value": 30.86
+   },
+   {
+    "day": "2026-09-09",
+    "value": 32.85
+   },
+   {
+    "day": "2026-09-10",
+    "value": 30.51
+   },
+   {
+    "day": "2026-09-11",
+    "value": 29.44
+   },
+   {
+    "day": "2026-09-12",
+    "value": 30.89
+   },
+   {
+    "day": "2026-09-13",
+    "value": 34.97
+   },
+   {
+    "day": "2026-09-14",
+    "value": 39.7
+   },
+   {
+    "day": "2026-09-15",
+    "value": 37.14
+   },
+   {
+    "day": "2026-09-16",
+    "value": 41.78
+   },
+   {
+    "day": "2026-09-17",
+    "value": 41.87
+   },
+   {
+    "day": "2026-09-18",
+    "value": 40.87
+   },
+   {
+    "day": "2026-09-19",
+    "value": 42.46
+   },
+   {
+    "day": "2026-09-20",
+    "value": 45.28
+   },
+   {
+    "day": "2026-09-21",
+    "value": 47.87
+   },
+   {
+    "day": "2026-09-22",
+    "value": 49.43
+   },
+   {
+    "day": "2026-09-23",
+    "value": 49.36
+   },
+   {
+    "day": "2026-09-24",
+    "value": 52.02
+   },
+   {
+    "day": "2026-09-25",
+    "value": 52.65
+   },
+   {
+    "day": "2026-09-26",
+    "value": 53.97
+   }
+  ],
+  "_truth": {
+   "days_to_peak": 26,
+   "ttl_days": 37.91,
+   "peak_value": 84.45,
+   "params": {
+    "L": 99.3488,
+    "k": 0.06,
+    "t0": -2.91,
+    "tau": 13.0
+   }
+  }
+ },
+ {
+  "id": "trend-zone-2-everything",
+  "name": "Zone 2 Everything",
+  "description": "Low-intensity aerobic training as a lifestyle identity, spilling out of endurance sport into general wellness.",
+  "why_now": "Very high momentum but essentially at peak \u2014 the window to act is nearly closed.",
+  "niche": "women's running and athletic apparel",
+  "category": "training_method",
+  "query_terms": [
+   "zone 2",
+   "zone 2 training",
+   "easy runs",
+   "aerobic base"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "Zone 2 is everywhere",
+    "url": "https://www.nytimes.com/well/move/zone-2-training",
+    "publisher": "New York Times",
+    "snippet": "The low-intensity training concept has crossed from endurance sport into mainstream wellness advice."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.17
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.01
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.28
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.02
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.02
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.39
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.08
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.06
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.52
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.37
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.5
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.03
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.24
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.47
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.78
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.02
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.08
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.44
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.26
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.2
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.5
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.41
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.61
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.1
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.02
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.37
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.06
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.37
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.1
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.3
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.5
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.41
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.27
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.64
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.17
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.07
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.15
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.09
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.22
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.23
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.04
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.27
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.44
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.34
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.35
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.21
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.79
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.38
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-02",
+    "value": 0.25
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.38
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.19
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.23
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.53
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.13
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.2
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.67
+   },
+   {
+    "day": "2026-07-12",
+    "value": 0.57
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.01
+   },
+   {
+    "day": "2026-07-14",
+    "value": 0.78
+   },
+   {
+    "day": "2026-07-15",
+    "value": 0.26
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.69
+   },
+   {
+    "day": "2026-07-17",
+    "value": 0.52
+   },
+   {
+    "day": "2026-07-18",
+    "value": 0.14
+   },
+   {
+    "day": "2026-07-19",
+    "value": 0.48
+   },
+   {
+    "day": "2026-07-20",
+    "value": 0.54
+   },
+   {
+    "day": "2026-07-21",
+    "value": 0.61
+   },
+   {
+    "day": "2026-07-22",
+    "value": 0.2
+   },
+   {
+    "day": "2026-07-23",
+    "value": 0.16
+   },
+   {
+    "day": "2026-07-24",
+    "value": 1.23
+   },
+   {
+    "day": "2026-07-25",
+    "value": 0.84
+   },
+   {
+    "day": "2026-07-26",
+    "value": 0.25
+   },
+   {
+    "day": "2026-07-27",
+    "value": 1.48
+   },
+   {
+    "day": "2026-07-28",
+    "value": 0.14
+   },
+   {
+    "day": "2026-07-29",
+    "value": 1.39
+   },
+   {
+    "day": "2026-07-30",
+    "value": 1.3
+   },
+   {
+    "day": "2026-07-31",
+    "value": 1.28
+   },
+   {
+    "day": "2026-08-01",
+    "value": 1.25
+   },
+   {
+    "day": "2026-08-02",
+    "value": 2.38
+   },
+   {
+    "day": "2026-08-03",
+    "value": 1.88
+   },
+   {
+    "day": "2026-08-04",
+    "value": 2.31
+   },
+   {
+    "day": "2026-08-05",
+    "value": 2.32
+   },
+   {
+    "day": "2026-08-06",
+    "value": 2.06
+   },
+   {
+    "day": "2026-08-07",
+    "value": 3.19
+   },
+   {
+    "day": "2026-08-08",
+    "value": 3.17
+   },
+   {
+    "day": "2026-08-09",
+    "value": 3.85
+   },
+   {
+    "day": "2026-08-10",
+    "value": 4.12
+   },
+   {
+    "day": "2026-08-11",
+    "value": 3.71
+   },
+   {
+    "day": "2026-08-12",
+    "value": 3.95
+   },
+   {
+    "day": "2026-08-13",
+    "value": 4.35
+   },
+   {
+    "day": "2026-08-14",
+    "value": 6.28
+   },
+   {
+    "day": "2026-08-15",
+    "value": 5.95
+   },
+   {
+    "day": "2026-08-16",
+    "value": 5.53
+   },
+   {
+    "day": "2026-08-17",
+    "value": 7.38
+   },
+   {
+    "day": "2026-08-18",
+    "value": 7.89
+   },
+   {
+    "day": "2026-08-19",
+    "value": 8.68
+   },
+   {
+    "day": "2026-08-20",
+    "value": 9.79
+   },
+   {
+    "day": "2026-08-21",
+    "value": 8.58
+   },
+   {
+    "day": "2026-08-22",
+    "value": 11.16
+   },
+   {
+    "day": "2026-08-23",
+    "value": 14.04
+   },
+   {
+    "day": "2026-08-24",
+    "value": 12.19
+   },
+   {
+    "day": "2026-08-25",
+    "value": 14.36
+   },
+   {
+    "day": "2026-08-26",
+    "value": 16.54
+   },
+   {
+    "day": "2026-08-27",
+    "value": 16.8
+   },
+   {
+    "day": "2026-08-28",
+    "value": 17.46
+   },
+   {
+    "day": "2026-08-29",
+    "value": 18.94
+   },
+   {
+    "day": "2026-08-30",
+    "value": 24.03
+   },
+   {
+    "day": "2026-08-31",
+    "value": 23.6
+   },
+   {
+    "day": "2026-09-01",
+    "value": 25.36
+   },
+   {
+    "day": "2026-09-02",
+    "value": 25.81
+   },
+   {
+    "day": "2026-09-03",
+    "value": 30.75
+   },
+   {
+    "day": "2026-09-04",
+    "value": 31.82
+   },
+   {
+    "day": "2026-09-05",
+    "value": 34.01
+   },
+   {
+    "day": "2026-09-06",
+    "value": 35.38
+   },
+   {
+    "day": "2026-09-07",
+    "value": 39.24
+   },
+   {
+    "day": "2026-09-08",
+    "value": 41.25
+   },
+   {
+    "day": "2026-09-09",
+    "value": 40.45
+   },
+   {
+    "day": "2026-09-10",
+    "value": 47.84
+   },
+   {
+    "day": "2026-09-11",
+    "value": 46.79
+   },
+   {
+    "day": "2026-09-12",
+    "value": 49.05
+   },
+   {
+    "day": "2026-09-13",
+    "value": 53.94
+   },
+   {
+    "day": "2026-09-14",
+    "value": 51.66
+   },
+   {
+    "day": "2026-09-15",
+    "value": 54.82
+   },
+   {
+    "day": "2026-09-16",
+    "value": 63.89
+   },
+   {
+    "day": "2026-09-17",
+    "value": 56.45
+   },
+   {
+    "day": "2026-09-18",
+    "value": 64.31
+   },
+   {
+    "day": "2026-09-19",
+    "value": 70.67
+   },
+   {
+    "day": "2026-09-20",
+    "value": 71.02
+   },
+   {
+    "day": "2026-09-21",
+    "value": 69.18
+   },
+   {
+    "day": "2026-09-22",
+    "value": 73.07
+   },
+   {
+    "day": "2026-09-23",
+    "value": 73.75
+   },
+   {
+    "day": "2026-09-24",
+    "value": 79.97
+   },
+   {
+    "day": "2026-09-25",
+    "value": 83.54
+   },
+   {
+    "day": "2026-09-26",
+    "value": 80.1
+   }
+  ],
+  "_truth": {
+   "days_to_peak": 3,
+   "ttl_days": 14.91,
+   "peak_value": 85.25,
+   "params": {
+    "L": 100.295,
+    "k": 0.1,
+    "t0": -14.346,
+    "tau": 13.0
+   }
+  }
+ },
+ {
+  "id": "trend-marathon-debut",
+  "name": "Marathon Debut Culture",
+  "description": "First-time marathon documentation as a content genre \u2014 the training block as a serialised story, not a single race-day post.",
+  "why_now": "Strong sustained climb tied to the autumn race calendar, with a long tail.",
+  "niche": "women's running and athletic apparel",
+  "category": "community_behaviour",
+  "query_terms": [
+   "first marathon",
+   "marathon training vlog",
+   "marathon debut",
+   "couch to marathon"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "Everyone is running their first marathon",
+    "url": "https://www.vogue.com/article/marathon-debut-culture",
+    "publisher": "Vogue",
+    "snippet": "Debut marathon entries from women under 30 have risen sharply for a third consecutive year."
+   },
+   {
+    "title": "The marathon training vlog boom",
+    "url": "https://www.tubefilter.com/marathon-vlog-genre",
+    "publisher": "Tubefilter",
+    "snippet": "Serialised training-block content is outperforming race-day recaps on watch time."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.04
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.05
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.25
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.32
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.32
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.62
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.69
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.19
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.57
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.23
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.21
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.06
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.5
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.46
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.05
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.27
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.19
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.27
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.09
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.23
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.47
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.34
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.41
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.2
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.58
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.24
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.37
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.21
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.45
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.94
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.47
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.5
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.5
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.54
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.38
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.62
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.7
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.4
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.09
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.76
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.3
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.74
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.6
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.15
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.45
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.28
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.36
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.53
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.4
+   },
+   {
+    "day": "2026-07-01",
+    "value": 1.03
+   },
+   {
+    "day": "2026-07-02",
+    "value": 1.0
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.44
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.07
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.44
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.29
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.93
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.65
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.97
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.94
+   },
+   {
+    "day": "2026-07-11",
+    "value": 1.28
+   },
+   {
+    "day": "2026-07-12",
+    "value": 1.34
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.78
+   },
+   {
+    "day": "2026-07-14",
+    "value": 1.26
+   },
+   {
+    "day": "2026-07-15",
+    "value": 1.62
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.72
+   },
+   {
+    "day": "2026-07-17",
+    "value": 1.14
+   },
+   {
+    "day": "2026-07-18",
+    "value": 1.11
+   },
+   {
+    "day": "2026-07-19",
+    "value": 1.21
+   },
+   {
+    "day": "2026-07-20",
+    "value": 1.21
+   },
+   {
+    "day": "2026-07-21",
+    "value": 1.98
+   },
+   {
+    "day": "2026-07-22",
+    "value": 1.44
+   },
+   {
+    "day": "2026-07-23",
+    "value": 2.24
+   },
+   {
+    "day": "2026-07-24",
+    "value": 2.79
+   },
+   {
+    "day": "2026-07-25",
+    "value": 2.14
+   },
+   {
+    "day": "2026-07-26",
+    "value": 1.97
+   },
+   {
+    "day": "2026-07-27",
+    "value": 2.58
+   },
+   {
+    "day": "2026-07-28",
+    "value": 1.41
+   },
+   {
+    "day": "2026-07-29",
+    "value": 2.94
+   },
+   {
+    "day": "2026-07-30",
+    "value": 3.07
+   },
+   {
+    "day": "2026-07-31",
+    "value": 4.19
+   },
+   {
+    "day": "2026-08-01",
+    "value": 4.03
+   },
+   {
+    "day": "2026-08-02",
+    "value": 3.13
+   },
+   {
+    "day": "2026-08-03",
+    "value": 3.43
+   },
+   {
+    "day": "2026-08-04",
+    "value": 3.78
+   },
+   {
+    "day": "2026-08-05",
+    "value": 4.67
+   },
+   {
+    "day": "2026-08-06",
+    "value": 4.37
+   },
+   {
+    "day": "2026-08-07",
+    "value": 4.59
+   },
+   {
+    "day": "2026-08-08",
+    "value": 4.89
+   },
+   {
+    "day": "2026-08-09",
+    "value": 4.78
+   },
+   {
+    "day": "2026-08-10",
+    "value": 7.08
+   },
+   {
+    "day": "2026-08-11",
+    "value": 6.6
+   },
+   {
+    "day": "2026-08-12",
+    "value": 7.46
+   },
+   {
+    "day": "2026-08-13",
+    "value": 7.02
+   },
+   {
+    "day": "2026-08-14",
+    "value": 7.91
+   },
+   {
+    "day": "2026-08-15",
+    "value": 7.93
+   },
+   {
+    "day": "2026-08-16",
+    "value": 9.06
+   },
+   {
+    "day": "2026-08-17",
+    "value": 9.84
+   },
+   {
+    "day": "2026-08-18",
+    "value": 8.69
+   },
+   {
+    "day": "2026-08-19",
+    "value": 9.42
+   },
+   {
+    "day": "2026-08-20",
+    "value": 11.13
+   },
+   {
+    "day": "2026-08-21",
+    "value": 11.54
+   },
+   {
+    "day": "2026-08-22",
+    "value": 12.39
+   },
+   {
+    "day": "2026-08-23",
+    "value": 14.63
+   },
+   {
+    "day": "2026-08-24",
+    "value": 14.71
+   },
+   {
+    "day": "2026-08-25",
+    "value": 14.1
+   },
+   {
+    "day": "2026-08-26",
+    "value": 15.22
+   },
+   {
+    "day": "2026-08-27",
+    "value": 16.62
+   },
+   {
+    "day": "2026-08-28",
+    "value": 19.68
+   },
+   {
+    "day": "2026-08-29",
+    "value": 19.8
+   },
+   {
+    "day": "2026-08-30",
+    "value": 19.88
+   },
+   {
+    "day": "2026-08-31",
+    "value": 19.07
+   },
+   {
+    "day": "2026-09-01",
+    "value": 24.01
+   },
+   {
+    "day": "2026-09-02",
+    "value": 23.42
+   },
+   {
+    "day": "2026-09-03",
+    "value": 25.64
+   },
+   {
+    "day": "2026-09-04",
+    "value": 26.21
+   },
+   {
+    "day": "2026-09-05",
+    "value": 27.17
+   },
+   {
+    "day": "2026-09-06",
+    "value": 28.0
+   },
+   {
+    "day": "2026-09-07",
+    "value": 30.81
+   },
+   {
+    "day": "2026-09-08",
+    "value": 30.84
+   },
+   {
+    "day": "2026-09-09",
+    "value": 29.77
+   },
+   {
+    "day": "2026-09-10",
+    "value": 34.43
+   },
+   {
+    "day": "2026-09-11",
+    "value": 34.64
+   },
+   {
+    "day": "2026-09-12",
+    "value": 39.08
+   },
+   {
+    "day": "2026-09-13",
+    "value": 38.5
+   },
+   {
+    "day": "2026-09-14",
+    "value": 45.95
+   },
+   {
+    "day": "2026-09-15",
+    "value": 45.61
+   },
+   {
+    "day": "2026-09-16",
+    "value": 44.59
+   },
+   {
+    "day": "2026-09-17",
+    "value": 47.68
+   },
+   {
+    "day": "2026-09-18",
+    "value": 51.04
+   },
+   {
+    "day": "2026-09-19",
+    "value": 53.32
+   },
+   {
+    "day": "2026-09-20",
+    "value": 51.41
+   },
+   {
+    "day": "2026-09-21",
+    "value": 49.36
+   },
+   {
+    "day": "2026-09-22",
+    "value": 51.33
+   },
+   {
+    "day": "2026-09-23",
+    "value": 55.74
+   },
+   {
+    "day": "2026-09-24",
+    "value": 54.18
+   },
+   {
+    "day": "2026-09-25",
+    "value": 59.04
+   },
+   {
+    "day": "2026-09-26",
+    "value": 63.55
+   }
+  ],
+  "_truth": {
+   "days_to_peak": 19,
+   "ttl_days": 29.08,
+   "peak_value": 85.16,
+   "params": {
+    "L": 100.1842,
+    "k": 0.068,
+    "t0": -6.5088,
+    "tau": 11.0
+   }
+  }
+ },
+ {
+  "id": "trend-run-commuting",
+  "name": "Run-Commuting",
+  "description": "Replacing the commute with a run, and the gear problem that creates.",
+  "why_now": "Early but real \u2014 low current momentum with a long runway, worth watching.",
+  "niche": "women's running and athletic apparel",
+  "category": "community_behaviour",
+  "query_terms": [
+   "run commute",
+   "running to work",
+   "run commuting gear"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "The run commute is having a moment",
+    "url": "https://www.fastcompany.com/run-commute-trend",
+    "publisher": "Fast Company",
+    "snippet": "Run-commuting mentions are climbing steadily in major metros with improving cycling infrastructure."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.2
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.07
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.22
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.11
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.31
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.02
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.05
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.3
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.09
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.02
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.53
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.47
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.49
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.23
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.13
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.05
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.26
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.37
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.49
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.04
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.48
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.09
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.46
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.78
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.58
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.46
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.04
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.18
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.38
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.93
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.31
+   },
+   {
+    "day": "2026-06-03",
+    "value": 1.1
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.11
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.03
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.35
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.19
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.68
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.69
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.41
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.11
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.26
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.14
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.24
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.36
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.55
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.07
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.3
+   },
+   {
+    "day": "2026-07-02",
+    "value": 0.71
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.49
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.38
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.77
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.55
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.16
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.68
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.59
+   },
+   {
+    "day": "2026-07-12",
+    "value": 0.43
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.37
+   },
+   {
+    "day": "2026-07-14",
+    "value": 0.12
+   },
+   {
+    "day": "2026-07-15",
+    "value": 0.66
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.61
+   },
+   {
+    "day": "2026-07-17",
+    "value": 0.79
+   },
+   {
+    "day": "2026-07-18",
+    "value": 0.73
+   },
+   {
+    "day": "2026-07-19",
+    "value": 0.76
+   },
+   {
+    "day": "2026-07-20",
+    "value": 0.31
+   },
+   {
+    "day": "2026-07-21",
+    "value": 0.6
+   },
+   {
+    "day": "2026-07-22",
+    "value": 0.84
+   },
+   {
+    "day": "2026-07-23",
+    "value": 0.71
+   },
+   {
+    "day": "2026-07-24",
+    "value": 0.63
+   },
+   {
+    "day": "2026-07-25",
+    "value": 1.14
+   },
+   {
+    "day": "2026-07-26",
+    "value": 1.33
+   },
+   {
+    "day": "2026-07-27",
+    "value": 0.38
+   },
+   {
+    "day": "2026-07-28",
+    "value": 1.53
+   },
+   {
+    "day": "2026-07-29",
+    "value": 1.05
+   },
+   {
+    "day": "2026-07-30",
+    "value": 0.96
+   },
+   {
+    "day": "2026-07-31",
+    "value": 1.66
+   },
+   {
+    "day": "2026-08-01",
+    "value": 2.17
+   },
+   {
+    "day": "2026-08-02",
+    "value": 2.12
+   },
+   {
+    "day": "2026-08-03",
+    "value": 1.62
+   },
+   {
+    "day": "2026-08-04",
+    "value": 2.22
+   },
+   {
+    "day": "2026-08-05",
+    "value": 2.96
+   },
+   {
+    "day": "2026-08-06",
+    "value": 2.86
+   },
+   {
+    "day": "2026-08-07",
+    "value": 3.28
+   },
+   {
+    "day": "2026-08-08",
+    "value": 2.23
+   },
+   {
+    "day": "2026-08-09",
+    "value": 2.44
+   },
+   {
+    "day": "2026-08-10",
+    "value": 2.07
+   },
+   {
+    "day": "2026-08-11",
+    "value": 2.66
+   },
+   {
+    "day": "2026-08-12",
+    "value": 3.19
+   },
+   {
+    "day": "2026-08-13",
+    "value": 4.08
+   },
+   {
+    "day": "2026-08-14",
+    "value": 3.66
+   },
+   {
+    "day": "2026-08-15",
+    "value": 3.17
+   },
+   {
+    "day": "2026-08-16",
+    "value": 3.96
+   },
+   {
+    "day": "2026-08-17",
+    "value": 4.22
+   },
+   {
+    "day": "2026-08-18",
+    "value": 3.61
+   },
+   {
+    "day": "2026-08-19",
+    "value": 4.65
+   },
+   {
+    "day": "2026-08-20",
+    "value": 4.99
+   },
+   {
+    "day": "2026-08-21",
+    "value": 5.88
+   },
+   {
+    "day": "2026-08-22",
+    "value": 6.63
+   },
+   {
+    "day": "2026-08-23",
+    "value": 6.59
+   },
+   {
+    "day": "2026-08-24",
+    "value": 7.3
+   },
+   {
+    "day": "2026-08-25",
+    "value": 5.85
+   },
+   {
+    "day": "2026-08-26",
+    "value": 7.32
+   },
+   {
+    "day": "2026-08-27",
+    "value": 7.84
+   },
+   {
+    "day": "2026-08-28",
+    "value": 8.53
+   },
+   {
+    "day": "2026-08-29",
+    "value": 8.07
+   },
+   {
+    "day": "2026-08-30",
+    "value": 9.88
+   },
+   {
+    "day": "2026-08-31",
+    "value": 10.64
+   },
+   {
+    "day": "2026-09-01",
+    "value": 10.25
+   },
+   {
+    "day": "2026-09-02",
+    "value": 12.45
+   },
+   {
+    "day": "2026-09-03",
+    "value": 12.18
+   },
+   {
+    "day": "2026-09-04",
+    "value": 12.76
+   },
+   {
+    "day": "2026-09-05",
+    "value": 12.65
+   },
+   {
+    "day": "2026-09-06",
+    "value": 13.14
+   },
+   {
+    "day": "2026-09-07",
+    "value": 14.05
+   },
+   {
+    "day": "2026-09-08",
+    "value": 17.44
+   },
+   {
+    "day": "2026-09-09",
+    "value": 18.43
+   },
+   {
+    "day": "2026-09-10",
+    "value": 17.8
+   },
+   {
+    "day": "2026-09-11",
+    "value": 20.33
+   },
+   {
+    "day": "2026-09-12",
+    "value": 18.73
+   },
+   {
+    "day": "2026-09-13",
+    "value": 20.17
+   },
+   {
+    "day": "2026-09-14",
+    "value": 21.55
+   },
+   {
+    "day": "2026-09-15",
+    "value": 21.42
+   },
+   {
+    "day": "2026-09-16",
+    "value": 23.92
+   },
+   {
+    "day": "2026-09-17",
+    "value": 26.45
+   },
+   {
+    "day": "2026-09-18",
+    "value": 24.37
+   },
+   {
+    "day": "2026-09-19",
+    "value": 27.77
+   },
+   {
+    "day": "2026-09-20",
+    "value": 29.95
+   },
+   {
+    "day": "2026-09-21",
+    "value": 32.37
+   },
+   {
+    "day": "2026-09-22",
+    "value": 32.27
+   },
+   {
+    "day": "2026-09-23",
+    "value": 31.53
+   },
+   {
+    "day": "2026-09-24",
+    "value": 35.24
+   },
+   {
+    "day": "2026-09-25",
+    "value": 34.21
+   },
+   {
+    "day": "2026-09-26",
+    "value": 40.69
+   }
+  ],
+  "_truth": {
+   "days_to_peak": 34,
+   "ttl_days": 44.08,
+   "peak_value": 84.26,
+   "params": {
+    "L": 99.1289,
+    "k": 0.065,
+    "t0": 7.3138,
+    "tau": 11.0
+   }
+  }
+ },
+ {
+  "id": "trend-track-club-fashion",
+  "name": "Track Club Fashion",
+  "description": "Retro track-club aesthetics moving from sport into everyday wardrobes.",
+  "why_now": "Mid-climb style trend with meaningful crossover into apparel purchase intent.",
+  "niche": "women's running and athletic apparel",
+  "category": "style",
+  "query_terms": [
+   "track club",
+   "track club fashion",
+   "retro running kit",
+   "athleisure track"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "Track club is the new prep",
+    "url": "https://www.gq.com/story/track-club-style",
+    "publisher": "GQ",
+    "snippet": "Retro club kit has become a dominant reference across streetwear and athleisure collections."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.04
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.26
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.26
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.06
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.05
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.56
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.81
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.08
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.19
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.23
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.21
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.25
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.12
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.52
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.12
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.29
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.15
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.27
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.7
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.22
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.17
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.32
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.09
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.12
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.16
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.06
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.4
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.03
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.31
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.38
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.36
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.02
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.79
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.71
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.27
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.19
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.21
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.17
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.02
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.63
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.47
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.41
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.02
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.34
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.19
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.43
+   },
+   {
+    "day": "2026-07-12",
+    "value": 0.27
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.01
+   },
+   {
+    "day": "2026-07-14",
+    "value": 0.69
+   },
+   {
+    "day": "2026-07-15",
+    "value": 0.25
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-18",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-24",
+    "value": 0.01
+   },
+   {
+    "day": "2026-07-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-26",
+    "value": 0.51
+   },
+   {
+    "day": "2026-07-27",
+    "value": 0.23
+   },
+   {
+    "day": "2026-07-28",
+    "value": 0.1
+   },
+   {
+    "day": "2026-07-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-30",
+    "value": 0.24
+   },
+   {
+    "day": "2026-07-31",
+    "value": 0.59
+   },
+   {
+    "day": "2026-08-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-02",
+    "value": 0.28
+   },
+   {
+    "day": "2026-08-03",
+    "value": 0.2
+   },
+   {
+    "day": "2026-08-04",
+    "value": 0.58
+   },
+   {
+    "day": "2026-08-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-06",
+    "value": 0.18
+   },
+   {
+    "day": "2026-08-07",
+    "value": 0.39
+   },
+   {
+    "day": "2026-08-08",
+    "value": 0.52
+   },
+   {
+    "day": "2026-08-09",
+    "value": 0.62
+   },
+   {
+    "day": "2026-08-10",
+    "value": 0.85
+   },
+   {
+    "day": "2026-08-11",
+    "value": 0.4
+   },
+   {
+    "day": "2026-08-12",
+    "value": 0.44
+   },
+   {
+    "day": "2026-08-13",
+    "value": 0.04
+   },
+   {
+    "day": "2026-08-14",
+    "value": 1.14
+   },
+   {
+    "day": "2026-08-15",
+    "value": 0.8
+   },
+   {
+    "day": "2026-08-16",
+    "value": 1.02
+   },
+   {
+    "day": "2026-08-17",
+    "value": 1.05
+   },
+   {
+    "day": "2026-08-18",
+    "value": 1.81
+   },
+   {
+    "day": "2026-08-19",
+    "value": 1.45
+   },
+   {
+    "day": "2026-08-20",
+    "value": 1.3
+   },
+   {
+    "day": "2026-08-21",
+    "value": 1.72
+   },
+   {
+    "day": "2026-08-22",
+    "value": 1.39
+   },
+   {
+    "day": "2026-08-23",
+    "value": 1.12
+   },
+   {
+    "day": "2026-08-24",
+    "value": 2.23
+   },
+   {
+    "day": "2026-08-25",
+    "value": 1.58
+   },
+   {
+    "day": "2026-08-26",
+    "value": 2.38
+   },
+   {
+    "day": "2026-08-27",
+    "value": 3.12
+   },
+   {
+    "day": "2026-08-28",
+    "value": 3.22
+   },
+   {
+    "day": "2026-08-29",
+    "value": 3.68
+   },
+   {
+    "day": "2026-08-30",
+    "value": 3.92
+   },
+   {
+    "day": "2026-08-31",
+    "value": 3.76
+   },
+   {
+    "day": "2026-09-01",
+    "value": 6.06
+   },
+   {
+    "day": "2026-09-02",
+    "value": 6.44
+   },
+   {
+    "day": "2026-09-03",
+    "value": 6.47
+   },
+   {
+    "day": "2026-09-04",
+    "value": 7.15
+   },
+   {
+    "day": "2026-09-05",
+    "value": 7.7
+   },
+   {
+    "day": "2026-09-06",
+    "value": 7.91
+   },
+   {
+    "day": "2026-09-07",
+    "value": 8.74
+   },
+   {
+    "day": "2026-09-08",
+    "value": 10.96
+   },
+   {
+    "day": "2026-09-09",
+    "value": 11.81
+   },
+   {
+    "day": "2026-09-10",
+    "value": 12.56
+   },
+   {
+    "day": "2026-09-11",
+    "value": 12.23
+   },
+   {
+    "day": "2026-09-12",
+    "value": 14.32
+   },
+   {
+    "day": "2026-09-13",
+    "value": 16.57
+   },
+   {
+    "day": "2026-09-14",
+    "value": 18.13
+   },
+   {
+    "day": "2026-09-15",
+    "value": 19.5
+   },
+   {
+    "day": "2026-09-16",
+    "value": 22.74
+   },
+   {
+    "day": "2026-09-17",
+    "value": 24.93
+   },
+   {
+    "day": "2026-09-18",
+    "value": 25.95
+   },
+   {
+    "day": "2026-09-19",
+    "value": 27.22
+   },
+   {
+    "day": "2026-09-20",
+    "value": 30.43
+   },
+   {
+    "day": "2026-09-21",
+    "value": 31.5
+   },
+   {
+    "day": "2026-09-22",
+    "value": 35.0
+   },
+   {
+    "day": "2026-09-23",
+    "value": 40.27
+   },
+   {
+    "day": "2026-09-24",
+    "value": 40.52
+   },
+   {
+    "day": "2026-09-25",
+    "value": 44.18
+   },
+   {
+    "day": "2026-09-26",
+    "value": 49.76
+   }
+  ],
+  "_truth": {
+   "days_to_peak": 16,
+   "ttl_days": 26.08,
+   "peak_value": 84.34,
+   "params": {
+    "L": 99.2242,
+    "k": 0.115,
+    "t0": 0.9165,
+    "tau": 11.0
+   }
+  }
+ },
+ {
+  "id": "trend-silent-walking",
+  "name": "Silent Walking",
+  "description": "Walking without headphones as a mindfulness practice.",
+  "why_now": "Already collapsed. Included to show the engine rejecting a dead trend.",
+  "niche": "women's running and athletic apparel",
+  "category": "wellness_fad",
+  "query_terms": [
+   "silent walking",
+   "walking without headphones"
+  ],
+  "seasonal": false,
+  "source": "seed",
+  "citations": [
+   {
+    "title": "Silent walking, explained",
+    "url": "https://www.theatlantic.com/health/silent-walking",
+    "publisher": "The Atlantic",
+    "snippet": "The practice spiked on social video before fading almost as quickly as it arrived."
+   }
+  ],
+  "momentum_series": [
+   {
+    "day": "2026-03-30",
+    "value": 0.62
+   },
+   {
+    "day": "2026-03-31",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-03",
+    "value": 0.54
+   },
+   {
+    "day": "2026-04-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-05",
+    "value": 0.02
+   },
+   {
+    "day": "2026-04-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-08",
+    "value": 0.1
+   },
+   {
+    "day": "2026-04-09",
+    "value": 0.24
+   },
+   {
+    "day": "2026-04-10",
+    "value": 0.46
+   },
+   {
+    "day": "2026-04-11",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-13",
+    "value": 0.29
+   },
+   {
+    "day": "2026-04-14",
+    "value": 0.32
+   },
+   {
+    "day": "2026-04-15",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-18",
+    "value": 0.06
+   },
+   {
+    "day": "2026-04-19",
+    "value": 0.37
+   },
+   {
+    "day": "2026-04-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-22",
+    "value": 0.47
+   },
+   {
+    "day": "2026-04-23",
+    "value": 0.24
+   },
+   {
+    "day": "2026-04-24",
+    "value": 0.06
+   },
+   {
+    "day": "2026-04-25",
+    "value": 0.11
+   },
+   {
+    "day": "2026-04-26",
+    "value": 0.22
+   },
+   {
+    "day": "2026-04-27",
+    "value": 0.0
+   },
+   {
+    "day": "2026-04-28",
+    "value": 0.7
+   },
+   {
+    "day": "2026-04-29",
+    "value": 0.28
+   },
+   {
+    "day": "2026-04-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-02",
+    "value": 0.25
+   },
+   {
+    "day": "2026-05-03",
+    "value": 0.05
+   },
+   {
+    "day": "2026-05-04",
+    "value": 0.47
+   },
+   {
+    "day": "2026-05-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-06",
+    "value": 0.57
+   },
+   {
+    "day": "2026-05-07",
+    "value": 0.4
+   },
+   {
+    "day": "2026-05-08",
+    "value": 0.26
+   },
+   {
+    "day": "2026-05-09",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-11",
+    "value": 0.08
+   },
+   {
+    "day": "2026-05-12",
+    "value": 0.1
+   },
+   {
+    "day": "2026-05-13",
+    "value": 0.58
+   },
+   {
+    "day": "2026-05-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-15",
+    "value": 0.19
+   },
+   {
+    "day": "2026-05-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-17",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-18",
+    "value": 0.03
+   },
+   {
+    "day": "2026-05-19",
+    "value": 0.37
+   },
+   {
+    "day": "2026-05-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-23",
+    "value": 0.06
+   },
+   {
+    "day": "2026-05-24",
+    "value": 0.09
+   },
+   {
+    "day": "2026-05-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-27",
+    "value": 0.2
+   },
+   {
+    "day": "2026-05-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-29",
+    "value": 0.13
+   },
+   {
+    "day": "2026-05-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-05-31",
+    "value": 0.39
+   },
+   {
+    "day": "2026-06-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-02",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-05",
+    "value": 0.29
+   },
+   {
+    "day": "2026-06-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-07",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-08",
+    "value": 0.29
+   },
+   {
+    "day": "2026-06-09",
+    "value": 0.05
+   },
+   {
+    "day": "2026-06-10",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-11",
+    "value": 0.13
+   },
+   {
+    "day": "2026-06-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-13",
+    "value": 0.4
+   },
+   {
+    "day": "2026-06-14",
+    "value": 0.11
+   },
+   {
+    "day": "2026-06-15",
+    "value": 0.66
+   },
+   {
+    "day": "2026-06-16",
+    "value": 0.22
+   },
+   {
+    "day": "2026-06-17",
+    "value": 0.55
+   },
+   {
+    "day": "2026-06-18",
+    "value": 0.19
+   },
+   {
+    "day": "2026-06-19",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-22",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-23",
+    "value": 0.27
+   },
+   {
+    "day": "2026-06-24",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-25",
+    "value": 0.24
+   },
+   {
+    "day": "2026-06-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-27",
+    "value": 0.27
+   },
+   {
+    "day": "2026-06-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-06-29",
+    "value": 0.07
+   },
+   {
+    "day": "2026-06-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-02",
+    "value": 0.05
+   },
+   {
+    "day": "2026-07-03",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-05",
+    "value": 0.01
+   },
+   {
+    "day": "2026-07-06",
+    "value": 0.09
+   },
+   {
+    "day": "2026-07-07",
+    "value": 0.17
+   },
+   {
+    "day": "2026-07-08",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-09",
+    "value": 0.34
+   },
+   {
+    "day": "2026-07-10",
+    "value": 0.17
+   },
+   {
+    "day": "2026-07-11",
+    "value": 0.54
+   },
+   {
+    "day": "2026-07-12",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-13",
+    "value": 0.24
+   },
+   {
+    "day": "2026-07-14",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-15",
+    "value": 0.22
+   },
+   {
+    "day": "2026-07-16",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-17",
+    "value": 0.31
+   },
+   {
+    "day": "2026-07-18",
+    "value": 0.46
+   },
+   {
+    "day": "2026-07-19",
+    "value": 0.34
+   },
+   {
+    "day": "2026-07-20",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-21",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-22",
+    "value": 0.38
+   },
+   {
+    "day": "2026-07-23",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-24",
+    "value": 0.81
+   },
+   {
+    "day": "2026-07-25",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-26",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-27",
+    "value": 0.16
+   },
+   {
+    "day": "2026-07-28",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-29",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-30",
+    "value": 0.0
+   },
+   {
+    "day": "2026-07-31",
+    "value": 0.4
+   },
+   {
+    "day": "2026-08-01",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-02",
+    "value": 0.06
+   },
+   {
+    "day": "2026-08-03",
+    "value": 0.25
+   },
+   {
+    "day": "2026-08-04",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-05",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-06",
+    "value": 0.0
+   },
+   {
+    "day": "2026-08-07",
+    "value": 0.41
+   },
+   {
+    "day": "2026-08-08",
+    "value": 0.25
+   },
+   {
+    "day": "2026-08-09",
+    "value": 0.26
+   },
+   {
+    "day": "2026-08-10",
+    "value": 0.34
+   },
+   {
+    "day": "2026-08-11",
+    "value": 0.05
+   },
+   {
+    "day": "2026-08-12",
+    "value": 0.37
+   },
+   {
+    "day": "2026-08-13",
+    "value": 0.04
+   },
+   {
+    "day": "2026-08-14",
+    "value": 0.3
+   },
+   {
+    "day": "2026-08-15",
+    "value": 0.67
+   },
+   {
+    "day": "2026-08-16",
+    "value": 0.41
+   },
+   {
+    "day": "2026-08-17",
+    "value": 0.67
+   },
+   {
+    "day": "2026-08-18",
+    "value": 0.45
+   },
+   {
+    "day": "2026-08-19",
+    "value": 0.64
+   },
+   {
+    "day": "2026-08-20",
+    "value": 0.48
+   },
+   {
+    "day": "2026-08-21",
+    "value": 1.28
+   },
+   {
+    "day": "2026-08-22",
+    "value": 2.11
+   },
+   {
+    "day": "2026-08-23",
+    "value": 1.24
+   },
+   {
+    "day": "2026-08-24",
+    "value": 1.72
+   },
+   {
+    "day": "2026-08-25",
+    "value": 2.91
+   },
+   {
+    "day": "2026-08-26",
+    "value": 2.41
+   },
+   {
+    "day": "2026-08-27",
+    "value": 3.65
+   },
+   {
+    "day": "2026-08-28",
+    "value": 3.88
+   },
+   {
+    "day": "2026-08-29",
+    "value": 3.72
+   },
+   {
+    "day": "2026-08-30",
+    "value": 4.75
+   },
+   {
+    "day": "2026-08-31",
+    "value": 6.9
+   },
+   {
+    "day": "2026-09-01",
+    "value": 6.49
+   },
+   {
+    "day": "2026-09-02",
+    "value": 6.73
+   },
+   {
+    "day": "2026-09-03",
+    "value": 9.25
+   },
+   {
+    "day": "2026-09-04",
+    "value": 10.71
+   },
+   {
+    "day": "2026-09-05",
+    "value": 11.52
+   },
+   {
+    "day": "2026-09-06",
+    "value": 14.5
+   },
+   {
+    "day": "2026-09-07",
+    "value": 15.57
+   },
+   {
+    "day": "2026-09-08",
+    "value": 16.84
+   },
+   {
+    "day": "2026-09-09",
+    "value": 18.27
+   },
+   {
+    "day": "2026-09-10",
+    "value": 22.09
+   },
+   {
+    "day": "2026-09-11",
+    "value": 21.45
+   },
+   {
+    "day": "2026-09-12",
+    "value": 23.67
+   },
+   {
+    "day": "2026-09-13",
+    "value": 23.98
+   },
+   {
+    "day": "2026-09-14",
+    "value": 27.62
+   },
+   {
+    "day": "2026-09-15",
+    "value": 27.15
+   },
+   {
+    "day": "2026-09-16",
+    "value": 27.57
+   },
+   {
+    "day": "2026-09-17",
+    "value": 33.25
+   },
+   {
+    "day": "2026-09-18",
+    "value": 36.66
+   },
+   {
+    "day": "2026-09-19",
+    "value": 35.86
+   },
+   {
+    "day": "2026-09-20",
+    "value": 37.75
+   },
+   {
+    "day": "2026-09-21",
+    "value": 32.6
+   },
+   {
+    "day": "2026-09-22",
+    "value": 26.24
+   },
+   {
+    "day": "2026-09-23",
+    "value": 28.5
+   },
+   {
+    "day": "2026-09-24",
+    "value": 25.99
+   },
+   {
+    "day": "2026-09-25",
+    "value": 23.26
+   },
+   {
+    "day": "2026-09-26",
+    "value": 20.1
+   }
+  ],
+  "_truth": {
+   "days_to_peak": -6,
+   "ttl_days": 3.16,
+   "peak_value": 36.12,
+   "params": {
+    "L": 42.4889,
+    "k": 0.18,
+    "t0": -15.6367,
+    "tau": 10.0
+   }
+  }
+ }
+]

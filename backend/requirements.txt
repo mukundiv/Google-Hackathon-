@@ -1,0 +1,23 @@
+# core
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pydantic>=2.9
+pydantic-settings>=2.6
+sqlmodel>=0.0.22
+python-dotenv>=1.0
+httpx>=0.27
+
+# engine
+numpy>=2.0
+scipy>=1.14
+scikit-learn>=1.5
+pulp>=2.9
+
+# live providers (only imported when a source is switched to live)
+google-genai>=1.0
+google-api-python-client>=2.150
+google-auth-oauthlib>=1.2
+google-cloud-bigquery>=3.27
+
+# tests
+pytest>=8.3

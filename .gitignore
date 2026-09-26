@@ -1,0 +1,30 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# secrets and credentials — never commit these
+.env
+.env.local
+backend/.env
+backend/.tokens/
+*client_secret*.json
+service-account*.json
+
+# local database and caches
+backend/coe.db
+backend/coe.db-journal
+
+# node
+node_modules/
+dist/
+frontend/screenshots/
+
+# editors and os
+.DS_Store
+.idea/
+.vscode/
