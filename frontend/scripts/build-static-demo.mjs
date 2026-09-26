@@ -15,7 +15,18 @@ import { join } from "node:path";
 
 const DIST = "dist";
 const DATA = "public/demo-data.json";
-const OUT = "demo.html";
+
+// Two outputs, because the two destinations want different things.
+//
+//   demo.html            a fragment, for publishing as an Artifact: the host
+//                        wraps it in its own doctype/head/body skeleton, so
+//                        shipping our own would nest a document in a document.
+//   demo-standalone.html a complete document, for opening from disk, emailing
+//                        or hosting anywhere. This one MUST carry a doctype:
+//                        without it a browser falls back to quirks mode and
+//                        the layout collapses.
+const OUT_FRAGMENT = "demo.html";
+const OUT_STANDALONE = "demo-standalone.html";
 
 const assets = readdirSync(join(DIST, "assets"));
 const jsFile = assets.find((f) => f.endsWith(".js"));
@@ -33,18 +44,32 @@ const data = readFileSync(DATA, "utf8");
 // inert in JSON but keeps the parser out of trouble.
 const safeData = data.replace(/<\//g, "<\\/");
 
-// Published as a document fragment, not a full document: the Artifact host
-// wraps the file in its own doctype/head/body skeleton (which supplies charset,
-// viewport and the phone safe-area padding), so shipping our own would nest one
-// document inside another. Everything else — title, styles, data, app — belongs
-// here at the top level.
-const html = `<title>Creator Opportunity Engine</title>
+const head = `<title>Creator Opportunity Engine</title>
 <style>${css}</style>
 <div id="root"></div>
 <script>window.__DEMO_DATA__ = ${safeData};</script>
 <script type="module">${js}</script>
 `;
 
-writeFileSync(OUT, html);
-const mb = (Buffer.byteLength(html) / 1_048_576).toFixed(2);
-console.log(`wrote ${OUT} (${mb} MB)`);
+const standalone = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="A decision engine for YouTube creator campaigns: when to act, who to activate, where to invest." />
+${head.replace(/^/gm, "    ").replace(/^ {4}<div id="root"><\/div>[\s\S]*$/m, "")}
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>window.__DEMO_DATA__ = ${safeData};</script>
+    <script type="module">${js}</script>
+  </body>
+</html>
+`;
+
+writeFileSync(OUT_FRAGMENT, head);
+writeFileSync(OUT_STANDALONE, standalone);
+
+const mb = (b) => (Buffer.byteLength(b) / 1_048_576).toFixed(2);
+console.log(`wrote ${OUT_FRAGMENT}   ${mb(head)} MB  (fragment, for the Artifact)`);
+console.log(`wrote ${OUT_STANDALONE}   ${mb(standalone)} MB  (full document, for sharing)`);
