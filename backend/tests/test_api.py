@@ -103,3 +103,18 @@ def test_learning_loop_absorbs_a_new_result(client):
     reset = client.post("/api/learning/reset").json()
     assert reset["state"]["campaigns_learned_from"] == before["campaigns_learned_from"]
     assert reset["state"]["applied_version"] == "baseline"
+
+
+def test_applied_weights_are_not_reported_as_pending(client):
+    """Adopting the recommended weighting must clear the 'newer weighting
+    available' state — the version gains a time suffix on apply, so comparing
+    the full string reported a pending change forever."""
+    client.post("/api/learning/reset")
+    assert client.get("/api/learning").json()["pending_change"] is True
+
+    client.post("/api/learning/apply")
+    after = client.get("/api/learning").json()
+    assert after["applied_version"].startswith(after["current"]["version"])
+    assert after["pending_change"] is False
+
+    client.post("/api/learning/reset")

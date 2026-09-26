@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { api } from "../lib/api";
+import { api, isStaticDemo } from "../lib/api";
 import { Badge } from "./ui";
 
 const STAGES = [
@@ -42,7 +42,12 @@ function ThemeToggle() {
  * live Google API or the seeded world.
  */
 function ProviderBadges() {
-  const { data } = useQuery({ queryKey: ["health"], queryFn: api.health, refetchInterval: 30_000 });
+  const { data } = useQuery({
+    queryKey: ["health"],
+    queryFn: api.health,
+    // A frozen snapshot has nothing to poll.
+    refetchInterval: isStaticDemo ? false : 30_000,
+  });
   if (!data) return null;
   const labels: Record<string, string> = {
     gemini: "Gemini",
@@ -117,7 +122,14 @@ export function Layout() {
 
       <div className="min-w-0 flex-1">
         <header className="flex flex-wrap items-center justify-between gap-3 border-b border-hairline bg-surface px-4 py-3 sm:px-6">
-          <ProviderBadges />
+          <div className="flex flex-wrap items-center gap-2">
+            {isStaticDemo && (
+              <Badge tone="info" title="A frozen capture of one full run of the engine, with no backend behind it">
+                Snapshot
+              </Badge>
+            )}
+            <ProviderBadges />
+          </div>
           <ThemeToggle />
         </header>
         <main className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6">

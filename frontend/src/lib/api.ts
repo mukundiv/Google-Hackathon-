@@ -1,4 +1,10 @@
-/** Typed client for the engine API. */
+/** Typed client for the engine API.
+ *
+ * The console also ships as a standalone page with no backend behind it. When
+ * a snapshot of real engine output is present on `window.__DEMO_DATA__`, every
+ * call below resolves from that instead of fetching, so the hosted demo is the
+ * same console rather than a separate mock of it.
+ */
 
 const BASE = import.meta.env.VITE_API_BASE ?? "/api";
 
@@ -283,8 +289,114 @@ export interface FullRun {
   portfolio: PortfolioComparison;
 }
 
+// ---- static snapshot ---------------------------------------------------
+export interface DemoSnapshot {
+  health: Health;
+  brand: BrandPortal;
+  scout: { brief: Brief; activation_lead_days: number; opportunities: Opportunity[] };
+  learning: LearningState;
+  learningAfter: LearningState;
+  learningApplied: LearningState;
+  capture: Record<string, { trend: Trend; window: CaptureWindow; momentum: MomentumPoint[]; projection: MomentumPoint[] }>;
+  scores: Record<string, ScoresResponse>;
+  portfolio: Record<string, PortfolioComparison>;
+  scoresRelearned: Record<string, ScoresResponse>;
+  portfolioRelearned: Record<string, PortfolioComparison>;
+  meta: { captured_from: string; trends: number; creators: number; note: string };
+}
+
+export interface ScoresResponse {
+  trend: Trend;
+  weights_version: string;
+  weights: Record<string, number>;
+  scores: CreatorScore[];
+}
+
+declare global {
+  interface Window {
+    __DEMO_DATA__?: DemoSnapshot;
+  }
+}
+
+const snapshot: DemoSnapshot | undefined =
+  typeof window !== "undefined" ? window.__DEMO_DATA__ : undefined;
+
+/** True when the page is running as a frozen snapshot with no API behind it. */
+export const isStaticDemo = Boolean(snapshot);
+
+/** Where the Learning page has got to. The snapshot carries the state before
+ *  feedback, after feedback, and after the new weights are adopted, so the
+ *  loop stays interactive without a backend to post to. */
+type LearningPhase = "base" | "observed" | "applied";
+let learningPhase: LearningPhase = "base";
+
+const settle = <T,>(value: T): Promise<T> =>
+  new Promise((resolve) => setTimeout(() => resolve(value), 120));
+
+function staticLearning(): LearningState {
+  const s = snapshot!;
+  if (learningPhase === "applied") return s.learningApplied;
+  if (learningPhase === "observed") return s.learningAfter;
+  return s.learning;
+}
+
+/** Once the learned weights are adopted, scoring and the portfolio change with
+ *  them — showing the weights move without the consequence would be the least
+ *  interesting half of the story. */
+const relearned = () => learningPhase === "applied";
+
+function missingTrend(trendId: string): never {
+  throw new Error(`No snapshot data for trend "${trendId}"`);
+}
+
+const staticApi = {
+  health: () => settle(snapshot!.health),
+  brand: () => settle(snapshot!.brand),
+  scout: (_brief?: Brief, _limit = 8) => settle(snapshot!.scout),
+  capture: (trendId: string) =>
+    settle(snapshot!.capture[trendId] ?? missingTrend(trendId)),
+  scores: (trendId: string, _brief?: Brief) => {
+    const source = relearned() ? snapshot!.scoresRelearned : snapshot!.scores;
+    return settle(source[trendId] ?? missingTrend(trendId));
+  },
+  portfolio: (trendId: string, _brief?: Brief, _excludeFlagged = true) => {
+    const source = relearned() ? snapshot!.portfolioRelearned : snapshot!.portfolio;
+    return settle(source[trendId] ?? missingTrend(trendId));
+  },
+  run: (trendId?: string) => {
+    const s = snapshot!;
+    const chosen =
+      s.scout.opportunities.find((o) => o.trend.id === trendId) ??
+      s.scout.opportunities.find((o) => o.window.verdict === "ACT") ??
+      s.scout.opportunities[0];
+    const scores = (relearned() ? s.scoresRelearned : s.scores)[chosen.trend.id];
+    return settle<FullRun>({
+      brief: s.scout.brief,
+      recommendation: s.meta.note,
+      activation_lead_days: s.scout.activation_lead_days,
+      opportunities: s.scout.opportunities,
+      chosen,
+      top_creators: scores.scores.slice(0, 10),
+      portfolio: (relearned() ? s.portfolioRelearned : s.portfolio)[chosen.trend.id],
+    });
+  },
+  learning: () => settle(staticLearning()),
+  observe: (_payload: unknown) => {
+    learningPhase = "observed";
+    return settle({ ok: true, state: staticLearning() });
+  },
+  applyLearning: () => {
+    learningPhase = "applied";
+    return settle({ ok: true });
+  },
+  resetLearning: () => {
+    learningPhase = "base";
+    return settle({ ok: true });
+  },
+};
+
 // ---- endpoints ---------------------------------------------------------
-export const api = {
+const liveApi = {
   health: () => get<Health>("/health"),
   brand: () => get<BrandPortal>("/brand"),
   scout: (brief?: Brief, limit = 8) =>
@@ -300,10 +412,7 @@ export const api = {
       projection: MomentumPoint[];
     }>(`/capture/${trendId}`),
   scores: (trendId: string, brief?: Brief) =>
-    post<{ trend: Trend; weights_version: string; weights: Record<string, number>; scores: CreatorScore[] }>(
-      "/creators/score",
-      { trend_id: trendId, brief },
-    ),
+    post<ScoresResponse>("/creators/score", { trend_id: trendId, brief }),
   portfolio: (trendId: string, brief?: Brief, excludeFlagged = true) =>
     post<PortfolioComparison>("/portfolio", {
       trend_id: trendId,
@@ -312,7 +421,10 @@ export const api = {
     }),
   run: (trendId?: string, brief?: Brief) => post<FullRun>("/run", { trend_id: trendId, brief }),
   learning: () => get<LearningState>("/learning"),
-  observe: (payload: unknown) => post<{ ok: boolean; state: LearningState }>("/learning/observe", payload),
+  observe: (payload: unknown) =>
+    post<{ ok: boolean; state: LearningState }>("/learning/observe", payload),
   applyLearning: () => post<{ ok: boolean }>("/learning/apply"),
   resetLearning: () => post<{ ok: boolean }>("/learning/reset"),
 };
+
+export const api = (snapshot ? staticApi : liveApi) as typeof liveApi;

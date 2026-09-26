@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "screenshot": "node scripts/screenshot.mjs"
+    "screenshot": "node scripts/screenshot.mjs",
+    "build:demo": "npm run build && node scripts/build-static-demo.mjs"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.104.0",

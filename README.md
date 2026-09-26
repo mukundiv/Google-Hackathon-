@@ -17,6 +17,15 @@ Google hackathon. It runs a continuous loop over Google and YouTube signals:
 | **04** | Optimize | What is the best mix? | **Portfolio** maximising coverage per dollar |
 | **05** | Learn | What improves next time? | Re-weighted model, from real outcomes |
 
+## See it
+
+**[Open the live demo →](https://claude.ai/artifact/9yiTUctS3QZN6uGKfjQaQH)**
+
+A hosted snapshot of one full run: all six screens, real charts, real numbers,
+nothing to install. Every figure in it was computed by the engine — the page
+carries a frozen capture of the API's output rather than authored fixtures.
+Rebuild it any time with `npm run build:demo` in `frontend/`.
+
 ## Run it
 
 No API keys required. The console is fully functional on seeded data.

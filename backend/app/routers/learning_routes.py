@@ -15,11 +15,16 @@ router = APIRouter(prefix="/api/learning", tags=["learning"])
 @router.get("")
 def state():
     st = services.learning_state()
+    applied = services.weights_version()
+    # Applying stamps the version with a time suffix (v9 -> v9-223818), so a
+    # straight equality check reported "a newer weighting is available"
+    # forever, including immediately after adopting it. Compare the base.
+    pending = applied.split("-", 1)[0] != st.current.version
     return {
         **st.model_dump(mode="json"),
         "applied_weights": services.current_weights(),
-        "applied_version": services.weights_version(),
-        "pending_change": services.weights_version() != st.current.version,
+        "applied_version": applied,
+        "pending_change": pending,
     }
 
 
