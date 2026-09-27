@@ -20,17 +20,6 @@ const SIGNAL_LABEL: Record<string, string> = {
   proven_performance: "Past results with you",
 };
 
-/** The same signals as noun phrases, for running inside a sentence. The label
- *  versions are written to sit in a table column and read as nonsense mid-clause
- *  ("we now trust already covers this more than suits your brand"). */
-const SIGNAL_PHRASE: Record<string, string> = {
-  content_fit: "whether a creator already covers the topic",
-  audience_fit: "whether they have the right audience",
-  brand_fit: "whether they suit the brand",
-  momentum: "whether they are growing on the topic",
-  proven_performance: "how they performed for you before",
-};
-
 /** A plausible result for the campaign this tool just recommended, so the loop
  *  can be closed live instead of waiting weeks for real data. */
 const SAMPLE_RESULT = {
@@ -101,14 +90,15 @@ export function LearningPage() {
       <Answer
         eyebrow="What we learned"
         headline={
+          // Written, not generated. This used to name whichever two weights
+          // moved furthest, which turned a mechanical fact into an editorial
+          // claim the data does not support — "we now care less about brand
+          // fit". The movements belong below, as evidence, not in large type
+          // as a conclusion.
           biggestUp && biggestDown ? (
             <>
-              We now weigh{" "}
-              <span style={{ color: "var(--brand)" }}>
-                {SIGNAL_PHRASE[biggestUp.signal] ?? biggestUp.label.toLowerCase()}
-              </span>{" "}
-              more heavily than{" "}
-              {SIGNAL_PHRASE[biggestDown.signal] ?? biggestDown.label.toLowerCase()}.
+              Every campaign makes the next one{" "}
+              <span style={{ color: "var(--brand)" }}>sharper</span>.
             </>
           ) : (
             "Not enough campaigns yet to change anything."

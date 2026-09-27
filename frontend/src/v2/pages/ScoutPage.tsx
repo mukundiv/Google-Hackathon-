@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { api, type Opportunity } from "../../lib/api";
 import { fmtDuration } from "../../lib/format";
 import { useSelection } from "../../state";
-import { Answer, Bar, Card, Chip, Failed, Loading, ShowWorking, Verdict } from "../ui";
+import { Answer, Bar, Card, Chip, Failed, Loading, NextStep, ShowWorking, Verdict } from "../ui";
 
 function TrendCard({ o, onOpen }: { o: Opportunity; onOpen: () => void }) {
   const w = o.window;
@@ -142,6 +142,14 @@ export function ScoutPage() {
           </div>
         </ShowWorking>
       </Card>
+
+      {/* Clicking a trend card also gets you to the next screen, but nothing
+          says so. Without this the walkthrough stops here. It carries the best
+          opportunity across, so the next screen opens on something worth
+          acting on rather than falling back to its default. */}
+      {act.length > 0 && (
+        <NextStep label="How long have you got?" onClick={() => open(act[0].trend.id)} />
+      )}
     </>
   );
 }
