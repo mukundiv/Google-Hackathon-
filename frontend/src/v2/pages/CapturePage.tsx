@@ -153,7 +153,7 @@ export function CapturePage() {
       </Card>
 
       <NextStep
-        label={skip ? "Look at creators anyway" : "See who should back it"}
+        label={skip ? "Look at creators anyway" : "See who qualifies"}
         onClick={() => {
           setTrendId(id);
           navigate("/creators");

@@ -1,12 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-// The v2 stylesheet ships in both builds but every rule in it is scoped to
-// [data-skin="youtube"], so the classic skin is untouched by it.
+// Every skin stylesheet ships in every build, but each one's rules are scoped
+// to its own [data-skin="…"], so a skin that is not selected contributes
+// nothing. That is what lets one tree hold three presentations without any of
+// them being able to affect the others.
 import "./v2/theme.css";
+import "./v3/theme.css";
 
-if (import.meta.env.VITE_SKIN === "youtube") {
-  document.documentElement.setAttribute("data-skin", "youtube");
+const SKINS = ["youtube", "kairos"];
+const skin = import.meta.env.VITE_SKIN;
+if (SKINS.includes(skin)) {
+  document.documentElement.setAttribute("data-skin", skin);
 }
 
 /** Load the data before the app does.

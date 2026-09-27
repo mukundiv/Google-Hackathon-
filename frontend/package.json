@@ -11,6 +11,7 @@
     "screenshot": "node scripts/screenshot.mjs",
     "build:demo": "npm run build && node scripts/build-static-demo.mjs",
     "build:demo:v2": "VITE_SKIN=youtube npm run build && SKIN=youtube node scripts/build-static-demo.mjs",
+    "build:demo:v3": "VITE_SKIN=kairos npm run build && SKIN=kairos node scripts/build-static-demo.mjs",
     "build:deploy": "VITE_SKIN=youtube VITE_STATIC_DATA=1 vite build"
   },
   "dependencies": {

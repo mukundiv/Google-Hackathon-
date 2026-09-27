@@ -158,14 +158,14 @@ export function CreatorsPage() {
   return (
     <>
       <Answer
-        eyebrow="Who to back"
+        eyebrow="Who qualifies"
         headline={
           <>
-            <span style={{ color: "var(--brand)" }}>{top.creator_name}</span> is the best fit — not
-            the one with {fmtCompact(biggest.subscribers)} subscribers.
+            From {scores.length} creators to the ones worth{" "}
+            <span style={{ color: "var(--brand)" }}>considering</span>.
           </>
         }
-        sub={`${top.creator_name} has ${fmtCompact(top.subscribers)} subscribers and scores ${Math.round(top.composite)}. The biggest channel in the pool has ${fmtCompact(biggest.subscribers)} and comes ${biggest.rank}th, because size is not the same thing as being the right person to talk about this. The next step builds the budget from this ranking — and it will not simply buy the top six.`}
+        sub={`The Creator Opportunity Score rates every creator's fit for this specific campaign — brand fit, audience alignment, sentiment and more. ${top.creator_name} leads on ${Math.round(top.composite)} with ${fmtCompact(top.subscribers)} subscribers, while the biggest channel in the pool has ${fmtCompact(biggest.subscribers)} and comes ${biggest.rank}th: size is not the same thing as being the right person to talk about this. The highest scorers form a qualified consideration set, and the next step builds the budget from it — a shortlist, not a running order.`}
       />
 
       <div className="space-y-3">

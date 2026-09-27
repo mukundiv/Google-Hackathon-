@@ -25,13 +25,16 @@ const DATA = "public/demo-data.json";
 //                        or hosting anywhere. This one MUST carry a doctype:
 //                        without it a browser falls back to quirks mode and
 //                        the layout collapses.
-// A suffix keeps the two skins' outputs side by side, so the current version
-// stays buildable and publishable while the alternative is being reviewed.
-const IS_V2 = process.env.SKIN === "youtube";
-const SUFFIX = IS_V2 ? "-v2" : "";
-// The two versions sit side by side in the artifact gallery, so they need
-// names that tell them apart at a glance.
-const TITLE = IS_V2 ? "Creator Engine Plain Mode" : "Creator Opportunity Engine";
+// A suffix keeps each skin's output beside the others, so a version that has
+// been agreed on stays buildable and publishable while an alternative is being
+// reviewed. The versions sit together in the artifact gallery, so they also
+// need titles that tell them apart at a glance.
+const SKINS = {
+  classic: { suffix: "", title: "Creator Opportunity Engine" },
+  youtube: { suffix: "-v2", title: "Creator Engine Plain Mode" },
+  kairos: { suffix: "-v3", title: "Google KAIROS" },
+};
+const { suffix: SUFFIX, title: TITLE } = SKINS[process.env.SKIN] ?? SKINS.classic;
 const OUT_FRAGMENT = `demo${SUFFIX}.html`;
 const OUT_STANDALONE = `demo-standalone${SUFFIX}.html`;
 

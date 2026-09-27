@@ -8,6 +8,7 @@ import { LearningPage } from "./pages/LearningPage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 import { ScoutPage } from "./pages/ScoutPage";
 import { LayoutV2 } from "./v2/Layout";
+import { LayoutV3 } from "./v3/Layout";
 import { BrandPage as BrandPageV2 } from "./v2/pages/BrandPage";
 import { CapturePage as CapturePageV2 } from "./v2/pages/CapturePage";
 import { CreatorsPage as CreatorsPageV2 } from "./v2/pages/CreatorsPage";
@@ -20,35 +21,56 @@ import { SelectionProvider } from "./state";
  *
  *  "youtube" is the simplified, YouTube-flavoured version: same data, same
  *  engine, same charts — plain language on the surface with the technical
- *  detail one click away. Both are built from this one tree so the two never
- *  drift apart.
+ *  detail one click away. "kairos" is a third presentation of that same
+ *  plain-language console under its own identity. All three are built from
+ *  this one tree, over one data layer and one set of charts, so they cannot
+ *  drift apart or disagree about a number.
  */
-const SKIN = import.meta.env.VITE_SKIN === "youtube" ? "youtube" : "classic";
+const SCREENS_BY_SKIN = {
+  classic: {
+    Layout,
+    Brand: BrandPortalPage,
+    Scout: ScoutPage,
+    Capture: CapturePage,
+    Creators: CreatorsPage,
+    Portfolio: PortfolioPage,
+    Learning: LearningPage,
+  },
+  youtube: {
+    Layout: LayoutV2,
+    Brand: BrandPageV2,
+    Scout: ScoutPageV2,
+    Capture: CapturePageV2,
+    Creators: CreatorsPageV2,
+    Portfolio: PortfolioPageV2,
+    Learning: LearningPageV2,
+  },
+  // KAIROS is a different identity over the same six screens, not a fork of
+  // them: it supplies its own shell and its own token set, and reuses the
+  // plain-language pages unchanged. Copying them would let the two drift, and
+  // the whole point of showing it beside version 2 is that only the
+  // presentation differs.
+  kairos: {
+    Layout: LayoutV3,
+    Brand: BrandPageV2,
+    Scout: ScoutPageV2,
+    Capture: CapturePageV2,
+    Creators: CreatorsPageV2,
+    Portfolio: PortfolioPageV2,
+    Learning: LearningPageV2,
+  },
+} as const;
+
+type Skin = keyof typeof SCREENS_BY_SKIN;
+
+const requested = import.meta.env.VITE_SKIN as string | undefined;
+const SKIN: Skin = requested && requested in SCREENS_BY_SKIN ? (requested as Skin) : "classic";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 60_000, refetchOnWindowFocus: false, retry: 1 } },
 });
 
-const SCREENS =
-  SKIN === "youtube"
-    ? {
-        Layout: LayoutV2,
-        Brand: BrandPageV2,
-        Scout: ScoutPageV2,
-        Capture: CapturePageV2,
-        Creators: CreatorsPageV2,
-        Portfolio: PortfolioPageV2,
-        Learning: LearningPageV2,
-      }
-    : {
-        Layout,
-        Brand: BrandPortalPage,
-        Scout: ScoutPage,
-        Capture: CapturePage,
-        Creators: CreatorsPage,
-        Portfolio: PortfolioPage,
-        Learning: LearningPage,
-      };
+const SCREENS = SCREENS_BY_SKIN[SKIN];
 
 export default function App() {
   const S = SCREENS;

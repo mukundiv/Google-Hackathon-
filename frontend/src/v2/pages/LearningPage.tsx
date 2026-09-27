@@ -154,7 +154,7 @@ export function LearningPage() {
           </PillButton>
         </div>
         <p className="mt-3 text-[13px] leading-snug text-ink-2">
-          After applying, go back to <strong>Who to back</strong> — the ranking will have moved.
+          After applying, go back to <strong>Who qualifies</strong> — the ranking will have moved.
           That is the point: the scores are not a fixed formula, they are what your own results
           taught us.
         </p>

@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { api, isStaticDemo } from "../lib/api";
-import { AskPanel, GeminiGlyph } from "./AskPanel";
-import { Chip } from "./ui";
+import { AskPanel, GeminiGlyph } from "../v2/AskPanel";
+import { Chip } from "../v2/ui";
 
 /** Steps named as questions, so the rail tells you what the tool does before
  *  you have clicked anything. */
@@ -16,10 +16,35 @@ const STEPS = [
   { to: "/learning", label: "What we learned", n: "6" },
 ];
 
+const TAGLINE = "Find the moment. Act in time.";
+
+/** The mark: a window with the moment marked inside it.
+ *
+ *  Drawn rather than borrowed — it is the Capture Window, which is the one
+ *  thing this engine computes that a trend dashboard does not. The rule is
+ *  the window, the heavy tick is now, and the gap after it is the time left
+ *  to act. */
+function WindowMark({ size = 22 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 22 22"
+      fill="none"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      <path d="M2 11h18" stroke="var(--baseline)" strokeWidth="1.25" strokeLinecap="round" />
+      <path d="M2 8.5v5M20 8.5v5" stroke="var(--baseline)" strokeWidth="1.25" strokeLinecap="round" />
+      <path d="M8.5 4.5v13" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function ThemeToggle() {
   const [theme, setTheme] = useState<string>(() => {
     try {
-      return localStorage.getItem("coe-theme-v2") ?? "light";
+      return localStorage.getItem("coe-theme-v3") ?? "light";
     } catch {
       return "light";
     }
@@ -27,7 +52,7 @@ function ThemeToggle() {
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     try {
-      localStorage.setItem("coe-theme-v2", theme);
+      localStorage.setItem("coe-theme-v3", theme);
     } catch {
       /* private browsing — the toggle still works for this session */
     }
@@ -66,7 +91,7 @@ function SourceChips() {
   );
 }
 
-export function LayoutV2() {
+export function LayoutV3() {
   const [askOpen, setAskOpen] = useState(false);
   return (
     <div className="min-h-screen">
@@ -74,21 +99,20 @@ export function LayoutV2() {
         className="sticky z-20 flex items-center justify-between gap-3 border-b border-hairline bg-surface px-4 py-2.5 sm:px-6"
         style={{ top: "env(safe-area-inset-top, 0px)" }}
       >
-        <div className="flex min-w-0 items-center gap-2.5">
-          {/* A play glyph, not YouTube's mark: the tool works with YouTube
-              data, it is not published by YouTube. */}
-          <span
-            aria-hidden="true"
-            className="grid h-6 w-9 shrink-0 place-items-center rounded-md"
-            style={{ background: "var(--brand)" }}
-          >
-            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" aria-hidden="true">
-              <path d="M9 5.5 0 11V0z" fill="#fff" />
-            </svg>
-          </span>
-          <span className="truncate text-[16px] font-medium tracking-tight">
-            Creator Opportunity Engine
-          </span>
+        <div className="flex min-w-0 items-center gap-3">
+          <WindowMark />
+          <div className="min-w-0">
+            <div className="truncate leading-none">
+              <span className="kairos-prefix text-[13px]">Google</span>{" "}
+              <span className="kairos-wordmark text-[17px]">KAIROS</span>
+            </div>
+            {/* The tagline is the definition, in the product's own words. It
+                is the first thing a judge reads, so it says what the tool
+                does rather than what the Greek means. */}
+            <div className="mt-1 hidden truncate text-[11px] leading-none text-muted sm:block">
+              {TAGLINE}
+            </div>
+          </div>
         </div>
         <div className="flex shrink-0 items-center gap-2">
           <button
@@ -117,24 +141,28 @@ export function LayoutV2() {
                   to={s.to}
                   end={s.to === "/"}
                   className={({ isActive }) =>
-                    `v2-pill flex items-center gap-2.5 px-3 py-2 text-[14px] transition-colors lg:rounded-lg ${
-                      isActive ? "font-medium" : "text-ink-2 hover:bg-raised"
+                    // A left rule rather than version 2's filled pill: the
+                    // active step is marked, not highlighted.
+                    `flex items-center gap-2.5 border-l-2 px-3 py-2 text-[14px] transition-colors ${
+                      isActive
+                        ? "font-medium"
+                        : "border-transparent text-ink-2 hover:bg-raised"
                     }`
                   }
                   style={({ isActive }) =>
-                    isActive ? { background: "var(--surface-2)" } : undefined
+                    isActive
+                      ? { borderColor: "var(--brand)", background: "var(--surface-2)" }
+                      : undefined
                   }
                 >
                   {({ isActive }) => (
                     <>
                       <span
                         aria-hidden="true"
-                        className="grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] font-medium"
-                        style={
-                          isActive
-                            ? { background: "var(--brand)", color: "var(--on-brand)" }
-                            : { background: "var(--surface-2)", color: "var(--text-secondary)" }
-                        }
+                        className="tnum w-3 shrink-0 text-[11px]"
+                        style={{
+                          color: isActive ? "var(--text-primary)" : "var(--text-muted)",
+                        }}
                       >
                         {s.n}
                       </span>

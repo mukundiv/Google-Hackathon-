@@ -131,7 +131,7 @@ export function PortfolioPage() {
             </span>
           </>
         }
-        sub="The mix is built from the same ranking as the last step — but it does not just buy the top of it. Taking the five highest-scoring creators sells you the same audience five times; swapping some of them for creators who reach people the others don't is worth more than the score you give up."
+        sub="The mix is built from the qualified set the last step produced — but it does not just buy the top of it. Taking the five highest-scoring creators sells you the same audience five times; swapping some of them for creators who reach people the others don't is worth more than the score you give up."
       />
 
       <div className="grid gap-4 lg:grid-cols-2">

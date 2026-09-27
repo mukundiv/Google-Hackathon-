@@ -1,0 +1,210 @@
+/* KAIROS — a third presentation of the same console.
+ *
+ * Redefines the same token names index.css declares, so every existing
+ * component — including the charts, which resolve their colours from these
+ * custom properties at call time — picks up the new palette with no code
+ * change. Every rule is scoped to [data-skin="kairos"], so this file is inert
+ * in the other two skins even though it ships in all three builds.
+ *
+ * Three decisions shape it, each one a deliberate contrast with version 2:
+ *
+ *  1. The chrome carries no colour. The brand token is ink on paper (and
+ *     paper on ink in the dark), so the only saturated colour on any screen
+ *     is data. Version 2 puts brand red on the nav, the buttons and the
+ *     headline; here the charts are the loudest thing on the page, which is
+ *     the correct hierarchy for an instrument.
+ *  2. Serif display over a sans body. Version 1 is all system-ui and version
+ *     2 is all Roboto, so the three are told apart at a glance without
+ *     reading a word. System stacks only — nothing is downloaded, and the
+ *     offline artifact carries no font payload.
+ *  3. Square corners. Version 2 is built from YouTube's pills; KAIROS is
+ *     4px throughout, which reads as a measuring device rather than a media
+ *     player.
+ *
+ * Series pair is violet/teal, chosen because both other skins already use
+ * blue/orange, and validated with the dataviz palette validator in both
+ * modes: light normal-vision ΔE 31.0, worst CVD 17.1; dark normal-vision
+ * ΔE 24.2, worst CVD 12.9. All six checks pass in both.
+ */
+
+:root[data-skin="kairos"] {
+  color-scheme: light;
+
+  /* Warm paper, not v2's cool grey and not v1's near-black. */
+  --plane: #f6f2ea;
+  --surface-1: #fffdf8;
+  --surface-2: #efe8db;
+  --text-primary: #171310;
+  --text-secondary: #554d45;
+  --text-muted: #8a8076;
+  --gridline: #e4dccd;
+  --baseline: #cabfab;
+  --border: rgba(23, 19, 16, 0.14);
+
+  /* Ink is the brand: buttons, active nav, the rank-one mark. */
+  --brand: #171310;
+  --brand-hover: #3a322b;
+  --on-brand: #fffdf8;
+
+  /* data series — the only saturated colour in the interface */
+  --series-1: #6d28d9;
+  --series-2: #0d9488;
+  --series-3: #b45309;
+
+  --status-good: #15803d;
+  --status-warning: #b45309;
+  --status-serious: #c2410c;
+  --status-critical: #b91c1c;
+  --verdict-pass: #8a8076;
+
+  --seq-100: #e6dcfb;
+  --seq-250: #bfa3f0;
+  --seq-400: #8b5cf6;
+  --seq-550: #6d28d9;
+  --seq-700: #4c1d95;
+
+  --radius-card: 4px;
+  --radius-pill: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-skin="kairos"]:not([data-theme="light"]) {
+    color-scheme: dark;
+    --plane: #14110d;
+    --surface-1: #1e1a15;
+    --surface-2: #2a241c;
+    --text-primary: #f7f2e8;
+    --text-secondary: #bdb3a4;
+    --text-muted: #8a8076;
+    --gridline: #2f2921;
+    --baseline: #3d352b;
+    --border: rgba(247, 242, 232, 0.14);
+
+    --brand: #f7f2e8;
+    --brand-hover: #ffffff;
+    --on-brand: #14110d;
+
+    --series-1: #8b5cf6;
+    --series-2: #0fa596;
+    --series-3: #d97706;
+
+    --status-good: #4ade80;
+    --status-warning: #fbbf24;
+    --status-serious: #fb923c;
+    --status-critical: #f87171;
+    --verdict-pass: #8a8076;
+
+    --seq-100: #4c1d95;
+    --seq-250: #5b21b6;
+    --seq-400: #7c3aed;
+    --seq-550: #a78bfa;
+    --seq-700: #ddd0fe;
+  }
+}
+
+:root[data-skin="kairos"][data-theme="dark"] {
+  color-scheme: dark;
+  --plane: #14110d;
+  --surface-1: #1e1a15;
+  --surface-2: #2a241c;
+  --text-primary: #f7f2e8;
+  --text-secondary: #bdb3a4;
+  --text-muted: #8a8076;
+  --gridline: #2f2921;
+  --baseline: #3d352b;
+  --border: rgba(247, 242, 232, 0.14);
+
+  --brand: #f7f2e8;
+  --brand-hover: #ffffff;
+  --on-brand: #14110d;
+
+  --series-1: #8b5cf6;
+  --series-2: #0fa596;
+  --series-3: #d97706;
+
+  --status-good: #4ade80;
+  --status-warning: #fbbf24;
+  --status-serious: #fb923c;
+  --status-critical: #f87171;
+  --verdict-pass: #8a8076;
+
+  --seq-100: #4c1d95;
+  --seq-250: #5b21b6;
+  --seq-400: #7c3aed;
+  --seq-550: #a78bfa;
+  --seq-700: #ddd0fe;
+}
+
+[data-skin="kairos"] body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--plane);
+  color: var(--text-primary);
+}
+
+/* The wordmark and the headline answers. A serif at display size is the
+   single strongest signal that this is not version 2. */
+[data-skin="kairos"] .kairos-display {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+/* "Google" sits ahead of the name at a smaller size and lighter weight, so
+   the eye reads KAIROS as the product and Google as what it is built on
+   rather than as part of the name. */
+[data-skin="kairos"] .kairos-prefix {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+/* KAIROS itself: letterspaced caps, so six letters read as a mark rather
+   than as a word in a sentence. */
+[data-skin="kairos"] .kairos-wordmark {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  letter-spacing: 0.26em;
+  text-indent: 0.26em; /* balances the trailing letterspace so it sits centred */
+  font-weight: 600;
+}
+
+/* The six screens are version 2's, so they wear version 2's class names.
+   Restyling them here is what makes them KAIROS. */
+[data-skin="kairos"] .v2-answer {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+[data-skin="kairos"] .v2-sub {
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.0625rem);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 62ch;
+}
+
+[data-skin="kairos"] .v2-pill {
+  border-radius: var(--radius-pill);
+}
+
+[data-skin="kairos"] details.v2-working > summary {
+  list-style: none;
+  cursor: pointer;
+}
+[data-skin="kairos"] details.v2-working > summary::-webkit-details-marker {
+  display: none;
+}
+[data-skin="kairos"] details.v2-working > summary:focus-visible {
+  outline: 2px solid var(--series-1);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
