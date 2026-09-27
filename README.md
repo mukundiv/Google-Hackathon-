@@ -25,8 +25,14 @@ with no routing between them.
 
 ## See it
 
-**[Open the demo →](https://claude.ai/artifact/9yiTUctS3QZN6uGKfjQaQH)** ·
-**[Plain-mode version →](https://claude.ai/artifact/N7PsdfRxPNVfDiCacYviDP)**
+### **[mukundiv.github.io/Google-Hackathon-](https://mukundiv.github.io/Google-Hackathon-/)**
+
+A public link, no sign-in, nothing to install — this is the one to submit. It
+is rebuilt and republished by GitHub Actions on every push to `frontend/`.
+
+Also, as two artifact links for the team:
+**[the demo →](https://claude.ai/artifact/9yiTUctS3QZN6uGKfjQaQH)** ·
+**[plain-mode version →](https://claude.ai/artifact/N7PsdfRxPNVfDiCacYviDP)**
 
 Two presentations of the same engine, for the team to choose between. The
 second is the same data and the same charts in plain language, styled after

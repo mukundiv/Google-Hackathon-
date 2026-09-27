@@ -10,6 +10,19 @@ requires billing to be enabled on the project even to use its free tier.
 
 ---
 
+## There is already a live link
+
+<https://mukundiv.github.io/Google-Hackathon-/> — free, public, no account,
+republished by `.github/workflows/deploy-pages.yml` on every push. Give judges
+that one.
+
+GitHub Pages serves static files only, so the Ask panel there answers from its
+saved replies rather than calling Gemini. Everything below is for the other
+link: the same console on a host that can run a function, which is what makes
+the Ask box genuinely live. Both can exist at once.
+
+---
+
 ## What you need
 
 1. A **Gemini API key** — <https://aistudio.google.com/apikey>. Free tier, no
@@ -22,6 +35,18 @@ requires billing to be enabled on the project even to use its free tier.
 
 ## Cloudflare Pages, start to finish
 
+0. **Check the key first**, before wiring it into anything. One real call,
+   about a minute:
+
+   ```bash
+   cd backend && python scripts/check_gemini_key.py AIza...your-key
+   ```
+
+   It prints whether the key works, whether Google Search grounding is included
+   on its tier, and the citations that came back. Grounding is what the trend
+   scout and the Ask panel both depend on, so if it is not available on the free
+   tier you want to know now rather than after the deploy. The key is never
+   printed or written anywhere.
 1. Push this branch to GitHub (already done if you are reading this in the repo).
 2. Go to <https://dash.cloudflare.com> → **Workers & Pages** → **Create** →
    **Pages** → **Connect to Git**, and pick this repository.

@@ -5,6 +5,13 @@
 # front of a judge. The Ask Gemini panel serves its saved answers here — making
 # it live needs a server-side key, which means a host with functions (see
 # DEPLOY.md for the Cloudflare path).
+#
+# Publishing goes through the gh-pages branch rather than the Pages deployment
+# API. The API route needs the Pages site to exist first, and the token this
+# workflow gets is not allowed to create one — actions/configure-pages answers
+# "Resource not accessible by integration". A branch push needs no such
+# permission: GitHub runs its own "pages build and deployment" on gh-pages and
+# serves the result.
 name: Deploy console to Pages
 
 on:
@@ -16,9 +23,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Let a running deploy finish rather than cancelling it — a half-deployed site
 # is worse than a slightly stale one.
@@ -27,7 +32,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,23 +56,22 @@ jobs:
           VITE_BASE: /${{ github.event.repository.name }}/
         run: npm run build:deploy
 
-      - name: Configure Pages
-        # enablement turns Pages on through the API the first time this runs,
-        # so nobody has to find the setting.
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Check the build has its data
+        # The console is static: without the snapshot it renders six empty
+        # screens, which is worse than failing here.
+        run: test -s frontend/dist/demo-data.json && test -s frontend/dist/index.html
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: frontend/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publish to gh-pages
+        # .nojekyll stops Pages running the output through Jekyll, which would
+        # drop anything under a leading underscore.
+        run: |
+          set -euo pipefail
+          touch frontend/dist/.nojekyll
+          cd frontend/dist
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Publish ${GITHUB_SHA::7}" \
+            -m "Build output only — edit frontend/ and let this workflow republish."
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:gh-pages
