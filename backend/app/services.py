@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+
+import numpy as np
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from typing import Any
@@ -19,7 +21,7 @@ from app.demo import DEMO_TODAY
 from app.engine.learn import learn
 from app.engine.listen import ScoutedOpportunity, scout
 from app.engine.match import BASELINE_WEIGHTS, ScoringContext, score_creators
-from app.engine.optimize import compare_portfolios
+from app.engine.optimize import build_audience_space, compare_portfolios, overlap_matrix
 from app.engine.predict import capture_window, fit_momentum
 from app.models.brief import CampaignBrief
 from app.models.campaign import PastCampaign
@@ -170,6 +172,76 @@ def run_portfolio(
             seed_creators(), scores, brief, exclude_flagged=exclude_flagged
         )
     return _cache[key]
+
+
+def excluded_top_picks(
+    brief: CampaignBrief,
+    trend: Trend,
+    comparison: PortfolioComparison,
+    scores: list[CreatorOpportunityScore],
+    top_n: int = 5,
+) -> list[dict]:
+    """Highly ranked creators the optimiser did not buy, and why.
+
+    Dropping the best-fit creator is the whole argument of this stage, but on
+    screen it just looked like they disappeared. Each one comes back with the
+    two numbers that actually decided it: what share of the budget they wanted,
+    and how much of their audience the chosen mix already reaches.
+    """
+    chosen_ids = {m.creator_id for m in comparison.optimized.members}
+    ranked = sorted(scores, key=lambda s: s.rank)[:top_n]
+    missing = [s for s in ranked if s.creator_id not in chosen_ids]
+    if not missing:
+        return []
+
+    creators = seed_creators()
+    index = {c.id: i for i, c in enumerate(creators)}
+    space = build_audience_space(creators, brief)
+    duplication = overlap_matrix(space)
+    chosen_idx = [index[cid] for cid in chosen_ids if cid in index]
+
+    out = []
+    for s in missing:
+        i = index.get(s.creator_id)
+        overlap = (
+            float(np.mean([duplication[i, k] for k in chosen_idx])) * 100.0
+            if i is not None and chosen_idx
+            else 0.0
+        )
+        budget_share = (
+            s.estimated_cost_usd / brief.budget_usd * 100.0 if brief.budget_usd else 0.0
+        )
+        if budget_share >= 20 and overlap >= 25:
+            reason = (
+                f"wanted {budget_share:.0f}% of the budget, and {overlap:.0f}% of their "
+                "audience is already reached by the creators in the mix"
+            )
+        elif budget_share >= 20:
+            reason = (
+                f"wanted {budget_share:.0f}% of the budget — that money buys more new "
+                "people elsewhere"
+            )
+        elif overlap >= 25:
+            reason = (
+                f"{overlap:.0f}% of their audience is already reached by the creators in "
+                "the mix"
+            )
+        else:
+            reason = "the same money reached more new people spread across other creators"
+
+        out.append(
+            {
+                "creator_id": s.creator_id,
+                "creator_name": s.creator_name,
+                "rank": s.rank,
+                "composite": s.composite,
+                "cost_usd": s.estimated_cost_usd,
+                "budget_share_pct": round(budget_share, 1),
+                "overlap_with_mix_pct": round(overlap, 1),
+                "reason": reason,
+            }
+        )
+    return out
 
 
 def build_ask_context(run: "FullRun") -> dict:

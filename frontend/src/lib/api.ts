@@ -165,6 +165,17 @@ export interface Portfolio {
   notes: string[];
 }
 
+export interface ExcludedTopPick {
+  creator_id: string;
+  creator_name: string;
+  rank: number;
+  composite: number;
+  cost_usd: number;
+  budget_share_pct: number;
+  overlap_with_mix_pct: number;
+  reason: string;
+}
+
 export interface PortfolioComparison {
   naive: Portfolio;
   optimized: Portfolio;
@@ -172,6 +183,10 @@ export interface PortfolioComparison {
   coverage_gain_pts: number;
   incremental_reach: number;
   verdict: string;
+  /** Step-4 rank by creator id, so the mix reads as the same ranked list. */
+  ranks?: Record<string, number>;
+  /** Highly ranked creators the optimiser did not buy, and why. */
+  excluded_top_picks?: ExcludedTopPick[];
 }
 
 export interface Brief {

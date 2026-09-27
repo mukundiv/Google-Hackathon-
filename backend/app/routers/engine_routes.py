@@ -136,7 +136,15 @@ def portfolio(req: BriefRequest):
     if trend is None:
         raise HTTPException(status_code=404, detail=f"unknown trend {req.trend_id}")
     comparison = services.run_portfolio(brief, trend, exclude_flagged=req.exclude_flagged)
-    return comparison.model_dump(mode="json")
+    scores = services.run_match(brief, trend)
+    return {
+        **comparison.model_dump(mode="json"),
+        # Rank ties the two screens together: the mix is drawn from the same
+        # ranked list the previous step showed, and without carrying the
+        # position across, a creator simply vanishes between them.
+        "ranks": {s.creator_id: s.rank for s in scores},
+        "excluded_top_picks": services.excluded_top_picks(brief, trend, comparison, scores),
+    }
 
 
 @router.post("/run")

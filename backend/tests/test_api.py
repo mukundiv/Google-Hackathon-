@@ -71,6 +71,38 @@ def test_scores_carry_archetype_and_reach_rank(client):
     assert any(s["reach_relevance_delta"] < -5 for s in scores), "expected a big-but-unfit creator"
 
 
+def test_portfolio_carries_the_step_four_ranking(client):
+    """The mix has to read as the same ranked list the previous screen showed."""
+    scores = client.post(
+        "/api/creators/score", json={"trend_id": "trend-social-running-clubs"}
+    ).json()["scores"]
+    by_id = {s["creator_id"]: s["rank"] for s in scores}
+
+    body = client.post(
+        "/api/portfolio", json={"trend_id": "trend-social-running-clubs"}
+    ).json()
+    ranks = body["ranks"]
+    assert ranks, "portfolio payload has to carry the ranking"
+    for mix in ("naive", "optimized"):
+        members = body[mix]["members"]
+        assert members
+        for m in members:
+            assert ranks[m["creator_id"]] == by_id[m["creator_id"]]
+
+    # The best fit is dropped here, and that is the argument of the stage — so
+    # it has to come back named, with the numbers that decided it.
+    chosen = {m["creator_id"] for m in body["optimized"]["members"]}
+    excluded = body["excluded_top_picks"]
+    assert [e["creator_id"] for e in excluded] == [
+        s["creator_id"] for s in sorted(scores, key=lambda s: s["rank"])[:5]
+        if s["creator_id"] not in chosen
+    ]
+    for e in excluded:
+        assert e["reason"]
+        assert 0 <= e["budget_share_pct"] <= 100
+        assert 0 <= e["overlap_with_mix_pct"] <= 100
+
+
 def test_brand_portal_summarises_history(client):
     body = client.get("/api/brand").json()
     assert body["insights"]["campaigns_run"] == 8

@@ -23,7 +23,8 @@ backend/coe.db-journal
 node_modules/
 dist/
 frontend/screenshots/
-frontend/public/demo-data.json
+# The snapshot is NOT ignored: the deployed site is static, so the engine's
+# output has to be in the repository for CI to build a console that has data.
 frontend/demo.html
 frontend/demo-standalone.html
 frontend/demo-v2.html

@@ -45,6 +45,14 @@ function CreatorCard({ s, rank }: { s: CreatorScore; rank: number }) {
         />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
+            {/* The rank is the thread through to the next step, where the mix
+                is drawn from this same list — so it travels with the name. */}
+            <span
+              className="tnum text-[13px] font-medium"
+              style={{ color: rank === 1 ? "var(--brand)" : "var(--text-muted)" }}
+            >
+              #{rank}
+            </span>
             <span className="text-[15px] font-medium">{s.creator_name}</span>
             {rank === 1 && <Chip tone="brand">Best fit</Chip>}
             {s.brand_safety_flag && (
@@ -153,11 +161,11 @@ export function CreatorsPage() {
         eyebrow="Who to back"
         headline={
           <>
-            Back <span style={{ color: "var(--brand)" }}>{top.creator_name}</span> — not the one
-            with {fmtCompact(biggest.subscribers)} subscribers.
+            <span style={{ color: "var(--brand)" }}>{top.creator_name}</span> is the best fit — not
+            the one with {fmtCompact(biggest.subscribers)} subscribers.
           </>
         }
-        sub={`${top.creator_name} has ${fmtCompact(top.subscribers)} subscribers and scores ${Math.round(top.composite)}. The biggest channel in the pool has ${fmtCompact(biggest.subscribers)} and comes ${biggest.rank}th, because size is not the same thing as being the right person to talk about this.`}
+        sub={`${top.creator_name} has ${fmtCompact(top.subscribers)} subscribers and scores ${Math.round(top.composite)}. The biggest channel in the pool has ${fmtCompact(biggest.subscribers)} and comes ${biggest.rank}th, because size is not the same thing as being the right person to talk about this. The next step builds the budget from this ranking — and it will not simply buy the top six.`}
       />
 
       <div className="space-y-3">
