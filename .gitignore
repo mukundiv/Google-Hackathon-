@@ -26,6 +26,8 @@ frontend/screenshots/
 frontend/public/demo-data.json
 frontend/demo.html
 frontend/demo-standalone.html
+frontend/demo-v2.html
+frontend/demo-standalone-v2.html
 
 # editors and os
 .DS_Store

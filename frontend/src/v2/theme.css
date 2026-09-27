@@ -1,0 +1,175 @@
+/* YouTube-flavoured skin.
+ *
+ * Redefines the same token names index.css declares, so every existing
+ * component — including the charts, which resolve their colours from these
+ * custom properties at call time — picks up the new palette with no code
+ * change. Loaded after index.css, so identical selectors win on source order.
+ *
+ * Two rules shape the palette:
+ *
+ *  1. Red is the brand accent, so no status may use it. Alarm-red for PASS
+ *     sitting beside red buttons and red nav would make the single most
+ *     important signal on the page the least legible one. PASS is a calm
+ *     slate chip instead — it means "skip", not "danger". Real red stays
+ *     reserved for genuine errors.
+ *  2. Charts never use brand red either. The series pair is blue/orange,
+ *     validated in both modes (normal-vision ΔE 38.3 light, 31.8 dark;
+ *     worst CVD ΔE 26.8).
+ */
+
+@import url("./roboto.css");
+
+:root[data-skin="youtube"] {
+  color-scheme: light;
+
+  /* YouTube's own interface values */
+  --plane: #f9f9f9;
+  --surface-1: #ffffff;
+  --surface-2: #f2f2f2;
+  --text-primary: #0f0f0f;
+  --text-secondary: #606060;
+  --text-muted: #909090;
+  --gridline: #e5e5e5;
+  --baseline: #cccccc;
+  --border: rgba(0, 0, 0, 0.1);
+
+  --brand: #ff0000;
+  --brand-hover: #cc0000;
+  --on-brand: #ffffff;
+
+  /* data series — never brand red */
+  --series-1: #065fd4;
+  --series-2: #eb6834;
+  --series-3: #067d3e;
+
+  --status-good: #067d3e;
+  --status-warning: #c77700;
+  --status-serious: #c77700;
+  --status-critical: #d03b3b; /* reserved for real errors, not for PASS */
+  --verdict-pass: #606060;
+
+  --seq-100: #d9e8fb;
+  --seq-250: #8ebcf0;
+  --seq-400: #3f8ae0;
+  --seq-550: #065fd4;
+  --seq-700: #0a3d82;
+
+  --radius-card: 12px;
+  --radius-pill: 999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-skin="youtube"]:not([data-theme="light"]) {
+    color-scheme: dark;
+    --plane: #0f0f0f;
+    --surface-1: #212121;
+    --surface-2: #272727;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --text-muted: #909090;
+    --gridline: #3f3f3f;
+    --baseline: #4d4d4d;
+    --border: rgba(255, 255, 255, 0.12);
+
+    --brand: #ff0000;
+    --brand-hover: #ff4444;
+    --on-brand: #ffffff;
+
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #2ba640;
+
+    --status-good: #2ba640;
+    --status-warning: #ffb020;
+    --status-serious: #ffb020;
+    --status-critical: #f28b82;
+    --verdict-pass: #aaaaaa;
+
+    --seq-100: #0a3d82;
+    --seq-250: #0b4ea6;
+    --seq-400: #2f7fd6;
+    --seq-550: #65b1ff;
+    --seq-700: #b7d9ff;
+  }
+}
+
+:root[data-skin="youtube"][data-theme="dark"] {
+  color-scheme: dark;
+  --plane: #0f0f0f;
+  --surface-1: #212121;
+  --surface-2: #272727;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --text-muted: #909090;
+  --gridline: #3f3f3f;
+  --baseline: #4d4d4d;
+  --border: rgba(255, 255, 255, 0.12);
+
+  --brand: #ff0000;
+  --brand-hover: #ff4444;
+  --on-brand: #ffffff;
+
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #2ba640;
+
+  --status-good: #2ba640;
+  --status-warning: #ffb020;
+  --status-serious: #ffb020;
+  --status-critical: #f28b82;
+  --verdict-pass: #aaaaaa;
+
+  --seq-100: #0a3d82;
+  --seq-250: #0b4ea6;
+  --seq-400: #2f7fd6;
+  --seq-550: #65b1ff;
+  --seq-700: #b7d9ff;
+}
+
+[data-skin="youtube"] body {
+  font-family: "Roboto Embedded", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--plane);
+  color: var(--text-primary);
+}
+
+/* The headline answer on each screen. Sized to be read from across a room,
+   because in a pitch it will be. */
+[data-skin="youtube"] .v2-answer {
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+[data-skin="youtube"] .v2-sub {
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.125rem);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: 60ch;
+}
+
+[data-skin="youtube"] .v2-pill {
+  border-radius: var(--radius-pill);
+}
+
+[data-skin="youtube"] details.v2-working > summary {
+  list-style: none;
+  cursor: pointer;
+}
+[data-skin="youtube"] details.v2-working > summary::-webkit-details-marker {
+  display: none;
+}
+[data-skin="youtube"] details.v2-working > summary:focus-visible {
+  outline: 2px solid var(--series-1);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

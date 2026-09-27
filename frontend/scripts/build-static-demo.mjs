@@ -25,8 +25,15 @@ const DATA = "public/demo-data.json";
 //                        or hosting anywhere. This one MUST carry a doctype:
 //                        without it a browser falls back to quirks mode and
 //                        the layout collapses.
-const OUT_FRAGMENT = "demo.html";
-const OUT_STANDALONE = "demo-standalone.html";
+// A suffix keeps the two skins' outputs side by side, so the current version
+// stays buildable and publishable while the alternative is being reviewed.
+const IS_V2 = process.env.SKIN === "youtube";
+const SUFFIX = IS_V2 ? "-v2" : "";
+// The two versions sit side by side in the artifact gallery, so they need
+// names that tell them apart at a glance.
+const TITLE = IS_V2 ? "Creator Engine Plain Mode" : "Creator Opportunity Engine";
+const OUT_FRAGMENT = `demo${SUFFIX}.html`;
+const OUT_STANDALONE = `demo-standalone${SUFFIX}.html`;
 
 const assets = readdirSync(join(DIST, "assets"));
 const jsFile = assets.find((f) => f.endsWith(".js"));
@@ -44,7 +51,7 @@ const data = readFileSync(DATA, "utf8");
 // inert in JSON but keeps the parser out of trouble.
 const safeData = data.replace(/<\//g, "<\\/");
 
-const head = `<title>Creator Opportunity Engine</title>
+const head = `<title>${TITLE}</title>
 <style>${css}</style>
 <div id="root"></div>
 <script>window.__DEMO_DATA__ = ${safeData};</script>

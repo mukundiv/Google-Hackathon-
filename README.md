@@ -19,12 +19,19 @@ Google hackathon. It runs a continuous loop over Google and YouTube signals:
 
 ## See it
 
-**[Open the live demo →](https://claude.ai/artifact/9yiTUctS3QZN6uGKfjQaQH)**
+**[Open the demo →](https://claude.ai/artifact/9yiTUctS3QZN6uGKfjQaQH)** ·
+**[Plain-mode version →](https://claude.ai/artifact/N7PsdfRxPNVfDiCacYviDP)**
 
-A hosted snapshot of one full run: all six screens, real charts, real numbers,
-nothing to install. Every figure in it was computed by the engine — the page
-carries a frozen capture of the API's output rather than authored fixtures.
-Rebuild it any time with `npm run build:demo` in `frontend/`.
+Two presentations of the same engine, for the team to choose between. The
+second is the same data and the same charts in plain language, styled after
+YouTube's own interface, with every technical figure moved behind a
+*Show the working* disclosure. Build either with `npm run build:demo` or
+`npm run build:demo:v2` in `frontend/`.
+
+Both are hosted snapshots of one full run: all six screens, real charts, real
+numbers, nothing to install. Every figure was computed by the engine — the
+pages carry a frozen capture of the API's output rather than authored
+fixtures.
 
 ## Run it
 

@@ -22,16 +22,36 @@ import { DataTable, Legend, TableToggle } from "../ui";
  * are the same measure at different levels of certainty, so they share a hue
  * and separate by dash — the forecast must not look like a measurement.
  */
+export interface MomentumLabels {
+  observed: string;
+  forecast: string;
+  threshold: string;
+  lead: string;
+  window: string;
+  closed: string;
+}
+
+const DEFAULT_LABELS: MomentumLabels = {
+  observed: "Observed momentum",
+  forecast: "Forecast",
+  threshold: "Relevance threshold",
+  lead: "activation lead",
+  window: "capture window",
+  closed: "already closed",
+};
+
 export function MomentumChart({
   observed,
   projection,
   window: w,
   height = 300,
+  labels = DEFAULT_LABELS,
 }: {
   observed: MomentumPoint[];
   projection: MomentumPoint[];
   window: CaptureWindow;
   height?: number;
+  labels?: MomentumLabels;
 }) {
   const c = chartColors();
   const [showTable, setShowTable] = useState(false);
@@ -67,9 +87,9 @@ export function MomentumChart({
       <div className="mb-2 flex items-center justify-between gap-3">
         <Legend
           items={[
-            { label: "Observed momentum", color: c.series1 },
-            { label: "Forecast", color: c.series1, dashed: true },
-            { label: "Relevance threshold", color: c.muted, dashed: true },
+            { label: labels.observed, color: c.series1 },
+            { label: labels.forecast, color: c.series1, dashed: true },
+            { label: labels.threshold, color: c.muted, dashed: true },
           ]}
         />
         <TableToggle open={showTable} onToggle={() => setShowTable((s) => !s)} />
@@ -100,7 +120,7 @@ export function MomentumChart({
             x2={launchBy}
             fill={c.muted}
             fillOpacity={0.14}
-            label={{ value: "activation lead", position: "insideTop", fontSize: 10, fill: c.muted }}
+            label={{ value: labels.lead, position: "insideTop", fontSize: 10, fill: c.muted }}
           />
           <ReferenceArea
             x1={launchBy}
@@ -108,7 +128,7 @@ export function MomentumChart({
             fill={w.verdict === "PASS" ? c.critical : c.good}
             fillOpacity={0.12}
             label={{
-              value: w.verdict === "PASS" ? "already closed" : "capture window",
+              value: w.verdict === "PASS" ? labels.closed : labels.window,
               position: "insideTop",
               fontSize: 10,
               fill: w.verdict === "PASS" ? c.critical : c.good,
@@ -168,7 +188,7 @@ export function MomentumChart({
 
       {showTable && (
         <DataTable
-          columns={["Date", "Observed", "Forecast"]}
+          columns={["Date", labels.observed, labels.forecast]}
           rows={data
             .filter((_, i) => i % 4 === 0)
             .map((r) => [

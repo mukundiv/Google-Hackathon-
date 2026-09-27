@@ -19,24 +19,40 @@ import { DataTable, Legend, TableToggle } from "../ui";
  * Coverage wants to be high and overlap wants to be low, which the subtitle
  * has to say — the chart alone cannot carry that.
  */
+export interface CompareLabels {
+  coverage: string;
+  overlap: string;
+  naive: string;
+  optimized: string;
+}
+
+const DEFAULT_LABELS: CompareLabels = {
+  coverage: "Target coverage",
+  overlap: "Audience overlap",
+  naive: "Top-ranked selection",
+  optimized: "Optimised portfolio",
+};
+
 export function PortfolioCompareChart({
   comparison,
   height = 240,
+  labels = DEFAULT_LABELS,
 }: {
   comparison: PortfolioComparison;
   height?: number;
+  labels?: CompareLabels;
 }) {
   const c = chartColors();
   const [showTable, setShowTable] = useState(false);
 
   const data = [
     {
-      metric: "Target coverage",
+      metric: labels.coverage,
       naive: comparison.naive.coverage_pct,
       optimized: comparison.optimized.coverage_pct,
     },
     {
-      metric: "Audience overlap",
+      metric: labels.overlap,
       naive: comparison.naive.overlap_pct,
       optimized: comparison.optimized.overlap_pct,
     },
@@ -47,8 +63,8 @@ export function PortfolioCompareChart({
       <div className="mb-2 flex items-center justify-between gap-3">
         <Legend
           items={[
-            { label: "Top-ranked selection", color: c.series1 },
-            { label: "Optimised portfolio", color: c.series2 },
+            { label: labels.naive, color: c.series1 },
+            { label: labels.optimized, color: c.series2 },
           ]}
         />
         <TableToggle open={showTable} onToggle={() => setShowTable((s) => !s)} />
@@ -73,7 +89,7 @@ export function PortfolioCompareChart({
             }}
             formatter={(v: unknown, n: unknown) => [
               `${Number(v).toFixed(1)}%`,
-              String(n) === "naive" ? "Top-ranked" : "Optimised",
+              String(n) === "naive" ? labels.naive : labels.optimized,
             ]}
           />
           <Bar dataKey="naive" fill={c.series1} radius={[4, 4, 0, 0]} isAnimationActive={false}>
@@ -98,7 +114,7 @@ export function PortfolioCompareChart({
       </ResponsiveContainer>
       {showTable && (
         <DataTable
-          columns={["Metric", "Top-ranked", "Optimised"]}
+          columns={["Metric", labels.naive, labels.optimized]}
           rows={data.map((d) => [d.metric, `${d.naive.toFixed(1)}%`, `${d.optimized.toFixed(1)}%`])}
         />
       )}
