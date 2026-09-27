@@ -1,4 +1,13 @@
 import { fmtCompact } from "../lib/format";
+import { PortraitAvatar } from "../v3/PortraitAvatar";
+
+/** The KAIROS skin draws creators as illustrated portraits instead of
+ *  initials. Checked at render rather than at module load: the build inlines
+ *  the dynamic import of App, which hoists this module's body above the line
+ *  in main.tsx that sets the attribute. */
+function portraits(): boolean {
+  return typeof document !== "undefined" && document.documentElement.dataset.skin === "kairos";
+}
 
 /** A stable colour pair per creator, derived from their id.
  *
@@ -43,6 +52,10 @@ export function Avatar({
   size?: number;
   ring?: string;
 }) {
+  if (portraits() && !src) {
+    return <PortraitAvatar name={name} id={id} size={size} ring={ring} />;
+  }
+
   const [from, to] = hues(id);
   const style: React.CSSProperties = {
     width: size,

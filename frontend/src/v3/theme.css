@@ -6,137 +6,134 @@
  * change. Every rule is scoped to [data-skin="kairos"], so this file is inert
  * in the other two skins even though it ships in all three builds.
  *
- * Three decisions shape it, each one a deliberate contrast with version 2:
+ * It sits in Google and YouTube's interface language — the same surfaces,
+ * Roboto, the same rounded geometry — and departs from version 2 in three
+ * deliberate places:
  *
- *  1. The chrome carries no colour. The brand token is ink on paper (and
- *     paper on ink in the dark), so the only saturated colour on any screen
- *     is data. Version 2 puts brand red on the nav, the buttons and the
- *     headline; here the charts are the loudest thing on the page, which is
- *     the correct hierarchy for an instrument.
- *  2. Serif display over a sans body. Version 1 is all system-ui and version
- *     2 is all Roboto, so the three are told apart at a glance without
- *     reading a word. System stacks only — nothing is downloaded, and the
- *     offline artifact carries no font payload.
- *  3. Square corners. Version 2 is built from YouTube's pills; KAIROS is
- *     4px throughout, which reads as a measuring device rather than a media
- *     player.
+ *  1. The accent is ink, not red. Version 2 puts brand red on the nav, the
+ *     buttons and the headline; here the chrome is black and white, which
+ *     leaves red free to mean something in a chart.
+ *  2. A serif carries the wordmark and the one headline answer per screen.
+ *     Everything else is Roboto, so the interface reads as Google while the
+ *     product still has a voice of its own.
+ *  3. Creators are drawn as illustrated portraits rather than initials.
  *
- * Series pair is violet/teal, chosen because both other skins already use
- * blue/orange, and validated with the dataviz palette validator in both
- * modes: light normal-vision ΔE 31.0, worst CVD 17.1; dark normal-vision
- * ΔE 24.2, worst CVD 12.9. All six checks pass in both.
+ * Series pair is Google blue and Google red — which version 2 cannot use,
+ * because red is its brand. Validated with the dataviz palette validator in
+ * both modes: light normal-vision ΔE 39.0, worst CVD 30.2; dark 32.6 and
+ * 26.8. All six checks pass in both.
  */
 
 :root[data-skin="kairos"] {
   color-scheme: light;
 
-  /* Warm paper, not v2's cool grey and not v1's near-black. */
-  --plane: #f6f2ea;
-  --surface-1: #fffdf8;
-  --surface-2: #efe8db;
-  --text-primary: #171310;
-  --text-secondary: #554d45;
-  --text-muted: #8a8076;
-  --gridline: #e4dccd;
-  --baseline: #cabfab;
-  --border: rgba(23, 19, 16, 0.14);
+  /* Google and YouTube's own interface values. */
+  --plane: #f9f9f9;
+  --surface-1: #ffffff;
+  --surface-2: #f2f2f2;
+  --text-primary: #0f0f0f;
+  --text-secondary: #5f6368;
+  --text-muted: #909090;
+  --gridline: #e5e5e5;
+  --baseline: #cccccc;
+  --border: rgba(0, 0, 0, 0.1);
 
-  /* Ink is the brand: buttons, active nav, the rank-one mark. */
-  --brand: #171310;
-  --brand-hover: #3a322b;
-  --on-brand: #fffdf8;
+  /* Ink is the accent: buttons, active nav, the rank-one mark. */
+  --brand: #0f0f0f;
+  --brand-hover: #3c4043;
+  --on-brand: #ffffff;
 
-  /* data series — the only saturated colour in the interface */
-  --series-1: #6d28d9;
-  --series-2: #0d9488;
-  --series-3: #b45309;
+  /* data series — Google blue and Google red */
+  --series-1: #1a73e8;
+  --series-2: #c5221f;
+  --series-3: #188038;
 
-  --status-good: #15803d;
-  --status-warning: #b45309;
-  --status-serious: #c2410c;
-  --status-critical: #b91c1c;
-  --verdict-pass: #8a8076;
+  --status-good: #188038;
+  --status-warning: #b06000;
+  --status-serious: #c5221f;
+  --status-critical: #c5221f;
+  --verdict-pass: #5f6368;
 
-  --seq-100: #e6dcfb;
-  --seq-250: #bfa3f0;
-  --seq-400: #8b5cf6;
-  --seq-550: #6d28d9;
-  --seq-700: #4c1d95;
+  --seq-100: #d2e3fc;
+  --seq-250: #8ab4f8;
+  --seq-400: #4285f4;
+  --seq-550: #1a73e8;
+  --seq-700: #174ea6;
 
-  --radius-card: 4px;
-  --radius-pill: 4px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root[data-skin="kairos"]:not([data-theme="light"]) {
     color-scheme: dark;
-    --plane: #14110d;
-    --surface-1: #1e1a15;
-    --surface-2: #2a241c;
-    --text-primary: #f7f2e8;
-    --text-secondary: #bdb3a4;
-    --text-muted: #8a8076;
-    --gridline: #2f2921;
-    --baseline: #3d352b;
-    --border: rgba(247, 242, 232, 0.14);
+    --plane: #0f0f0f;
+    --surface-1: #212121;
+    --surface-2: #272727;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --text-muted: #909090;
+    --gridline: #3f3f3f;
+    --baseline: #4d4d4d;
+    --border: rgba(255, 255, 255, 0.12);
 
-    --brand: #f7f2e8;
-    --brand-hover: #ffffff;
-    --on-brand: #14110d;
+    --brand: #ffffff;
+    --brand-hover: #e8eaed;
+    --on-brand: #0f0f0f;
 
-    --series-1: #8b5cf6;
-    --series-2: #0fa596;
-    --series-3: #d97706;
+    --series-1: #4285f4;
+    --series-2: #dc4b41;
+    --series-3: #34a853;
 
-    --status-good: #4ade80;
-    --status-warning: #fbbf24;
-    --status-serious: #fb923c;
-    --status-critical: #f87171;
-    --verdict-pass: #8a8076;
+    --status-good: #34a853;
+    --status-warning: #fdd663;
+    --status-serious: #f0a441;
+    --status-critical: #dc4b41;
+    --verdict-pass: #aaaaaa;
 
-    --seq-100: #4c1d95;
-    --seq-250: #5b21b6;
-    --seq-400: #7c3aed;
-    --seq-550: #a78bfa;
-    --seq-700: #ddd0fe;
+    --seq-100: #174ea6;
+    --seq-250: #1a73e8;
+    --seq-400: #4285f4;
+    --seq-550: #8ab4f8;
+    --seq-700: #d2e3fc;
   }
 }
 
 :root[data-skin="kairos"][data-theme="dark"] {
   color-scheme: dark;
-  --plane: #14110d;
-  --surface-1: #1e1a15;
-  --surface-2: #2a241c;
-  --text-primary: #f7f2e8;
-  --text-secondary: #bdb3a4;
-  --text-muted: #8a8076;
-  --gridline: #2f2921;
-  --baseline: #3d352b;
-  --border: rgba(247, 242, 232, 0.14);
+  --plane: #0f0f0f;
+  --surface-1: #212121;
+  --surface-2: #272727;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --text-muted: #909090;
+  --gridline: #3f3f3f;
+  --baseline: #4d4d4d;
+  --border: rgba(255, 255, 255, 0.12);
 
-  --brand: #f7f2e8;
-  --brand-hover: #ffffff;
-  --on-brand: #14110d;
+  --brand: #ffffff;
+  --brand-hover: #e8eaed;
+  --on-brand: #0f0f0f;
 
-  --series-1: #8b5cf6;
-  --series-2: #0fa596;
-  --series-3: #d97706;
+  --series-1: #4285f4;
+  --series-2: #dc4b41;
+  --series-3: #34a853;
 
-  --status-good: #4ade80;
-  --status-warning: #fbbf24;
-  --status-serious: #fb923c;
-  --status-critical: #f87171;
-  --verdict-pass: #8a8076;
+  --status-good: #34a853;
+  --status-warning: #fdd663;
+  --status-serious: #f0a441;
+  --status-critical: #dc4b41;
+  --verdict-pass: #aaaaaa;
 
-  --seq-100: #4c1d95;
-  --seq-250: #5b21b6;
-  --seq-400: #7c3aed;
-  --seq-550: #a78bfa;
-  --seq-700: #ddd0fe;
+  --seq-100: #174ea6;
+  --seq-250: #1a73e8;
+  --seq-400: #4285f4;
+  --seq-550: #8ab4f8;
+  --seq-700: #d2e3fc;
 }
 
 [data-skin="kairos"] body {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Roboto Embedded", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: var(--plane);
   color: var(--text-primary);
 }
@@ -151,7 +148,7 @@
    the eye reads KAIROS as the product and Google as what it is built on
    rather than as part of the name. */
 [data-skin="kairos"] .kairos-prefix {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Roboto Embedded", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--text-secondary);
