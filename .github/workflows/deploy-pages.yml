@@ -1,0 +1,73 @@
+# Publishes the console to GitHub Pages.
+#
+# The site is static: the six screens carry a snapshot of the real engine's
+# output, so there is nothing to cold-start and nothing that can fall over in
+# front of a judge. The Ask Gemini panel serves its saved answers here — making
+# it live needs a server-side key, which means a host with functions (see
+# DEPLOY.md for the Cloudflare path).
+name: Deploy console to Pages
+
+on:
+  push:
+    branches: [claude/creator-opportunity-engine-h1jlda]
+    paths:
+      - "frontend/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it — a half-deployed site
+# is worse than a slightly stale one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build
+        working-directory: frontend
+        # Pages serves this repo at /<repo-name>/, so assets need that prefix.
+        # Routing is hash-based and the snapshot is fetched relatively, so
+        # nothing else has to know about the subpath.
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+        run: npm run build:deploy
+
+      - name: Configure Pages
+        # enablement turns Pages on through the API the first time this runs,
+        # so nobody has to find the setting.
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
