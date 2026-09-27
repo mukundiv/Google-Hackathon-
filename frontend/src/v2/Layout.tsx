@@ -86,9 +86,12 @@ export function LayoutV2() {
               <path d="M9 5.5 0 11V0z" fill="#fff" />
             </svg>
           </span>
-          <span className="truncate text-[16px] font-medium tracking-tight">
-            Creator Opportunity Engine
-          </span>
+          <div className="min-w-0">
+            <div className="truncate text-[16px] font-medium tracking-tight leading-none">KAIROS</div>
+            <div className="mt-1 hidden truncate text-[11px] leading-none text-muted sm:block">
+              Powered by Google
+            </div>
+          </div>
         </div>
         <div className="flex shrink-0 items-center gap-2">
           <button

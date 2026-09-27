@@ -31,7 +31,7 @@ const DATA = "public/demo-data.json";
 // need titles that tell them apart at a glance.
 const SKINS = {
   classic: { suffix: "", title: "Creator Opportunity Engine" },
-  youtube: { suffix: "-v2", title: "Creator Engine Plain Mode" },
+  youtube: { suffix: "-v2", title: "KAIROS" },
   kairos: { suffix: "-v3", title: "Google KAIROS" },
 };
 const { suffix: SUFFIX, title: TITLE } = SKINS[process.env.SKIN] ?? SKINS.classic;

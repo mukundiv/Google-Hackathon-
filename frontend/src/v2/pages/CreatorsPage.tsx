@@ -150,8 +150,6 @@ export function CreatorsPage() {
   if (error || !data) return <Failed error={error} />;
 
   const scores = data.scores;
-  const top = scores[0];
-  const biggest = [...scores].sort((a, b) => b.subscribers - a.subscribers)[0];
   const shown = showAll ? scores : scores.slice(0, 5);
   const chosen = (portfolio.data?.optimized.members ?? []).map((m) => m.creator_id);
 
@@ -161,11 +159,11 @@ export function CreatorsPage() {
         eyebrow="Who qualifies"
         headline={
           <>
-            From {scores.length} creators to the ones worth{" "}
-            <span style={{ color: "var(--brand)" }}>considering</span>.
+            From a broad creator pool to the creators worth{" "}
+            <span style={{ color: "var(--brand)" }}>considering</span>
           </>
         }
-        sub={`The Creator Opportunity Score rates every creator's fit for this specific campaign — brand fit, audience alignment, sentiment and more. ${top.creator_name} leads on ${Math.round(top.composite)} with ${fmtCompact(top.subscribers)} subscribers, while the biggest channel in the pool has ${fmtCompact(biggest.subscribers)} and comes ${biggest.rank}th: size is not the same thing as being the right person to talk about this. The highest scorers form a qualified consideration set, and the next step builds the budget from it — a shortlist, not a running order.`}
+        sub={"Our Creator Opportunity Score evaluates each creator\u2019s fit for this specific campaign across signals including brand fit, audience alignment, sentiment, and more. The highest-scoring creators form a qualified consideration set \u2014 giving the Portfolio Optimizer a stronger pool from which to build the final creator mix."}
       />
 
       <div className="space-y-3">
