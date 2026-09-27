@@ -129,6 +129,15 @@ export interface CreatorScore {
   handle?: string;
   avg_views?: number;
   reach_relevance_delta?: number;
+  thumbnail_url?: string | null;
+  top_videos?: {
+    id: string;
+    title: string;
+    views: number;
+    published_at: string;
+    duration_seconds: number;
+    thumbnail_url?: string | null;
+  }[];
 }
 
 export interface PortfolioMember {
@@ -290,7 +299,16 @@ export interface FullRun {
 }
 
 // ---- static snapshot ---------------------------------------------------
+export interface AskAnswer {
+  text: string;
+  citations: { title: string; url: string; publisher: string; snippet: string }[];
+  searched: boolean;
+  source: string;
+  suggestions: string[];
+}
+
 export interface DemoSnapshot {
+  ask?: { suggestions: string[]; answers: Record<string, AskAnswer> };
   health: Health;
   brand: BrandPortal;
   scout: { brief: Brief; activation_lead_days: number; opportunities: Opportunity[] };
@@ -324,6 +342,70 @@ const snapshot: DemoSnapshot | undefined =
 /** True when the page is running as a frozen snapshot with no API behind it. */
 export const isStaticDemo = Boolean(snapshot);
 
+/** A compact picture of the run currently on screen, for the deployment that
+ *  has no engine of its own. Trimmed hard: the full snapshot is ~2 MB and the
+ *  question has to fit in the prompt beside it. */
+function askContext(trendId?: string): Record<string, unknown> | undefined {
+  if (!snapshot) return undefined;
+  const id =
+    trendId ??
+    snapshot.scout.opportunities.find((o) => o.window.verdict === "ACT")?.trend.id ??
+    snapshot.scout.opportunities[0]?.trend.id;
+  if (!id) return undefined;
+
+  const opportunity = snapshot.scout.opportunities.find((o) => o.trend.id === id);
+  const scores = snapshot.scores[id]?.scores ?? [];
+  const portfolio = snapshot.portfolio[id];
+
+  return {
+    brand: snapshot.scout.brief.brand_name,
+    product: snapshot.scout.brief.product,
+    budget_usd: snapshot.scout.brief.budget_usd,
+    activation_lead_days: snapshot.scout.activation_lead_days,
+    trend: opportunity && {
+      name: opportunity.trend.name,
+      what_it_is: opportunity.trend.description,
+      verdict: opportunity.window.verdict,
+      stage: opportunity.window.stage,
+      ttl_days: opportunity.window.ttl_days,
+      capture_window_days: opportunity.window.capture_window_days,
+      rationale: opportunity.window.rationale,
+    },
+    rejected_trends: snapshot.scout.opportunities
+      .filter((o) => o.window.verdict === "PASS")
+      .map((o) => ({ name: o.trend.name, window_days: o.window.capture_window_days })),
+    creators: scores.slice(0, 6).map((s) => ({
+      name: s.creator_name,
+      composite: s.composite,
+      rank: s.rank,
+      rank_by_reach: s.rank_by_reach,
+      subscribers: s.subscribers,
+      cost_usd: s.estimated_cost_usd,
+      brand_safety_flag: s.brand_safety_flag,
+      brand_safety_note: s.brand_safety_note,
+      signals: s.signals.map((sig) => ({ label: sig.label, score: sig.score, why: sig.rationale })),
+    })),
+    portfolio: portfolio && {
+      size: portfolio.optimized.members.length,
+      spend: portfolio.optimized.total_cost_usd,
+      members: portfolio.optimized.members.map((m) => m.creator_name),
+      overlap_pct: portfolio.optimized.overlap_pct,
+      naive_overlap_pct: portfolio.naive.overlap_pct,
+      people_reached: portfolio.optimized.deduplicated_reach,
+    },
+    learning: snapshot.learning.summary,
+  };
+}
+
+/** Suggested questions for the Ask panel, from the snapshot where it has them. */
+export const askSuggestions = (): string[] =>
+  snapshot?.ask?.suggestions ?? [
+    "Why is this creator ranked first?",
+    "Which creators should we avoid, and why?",
+    "Why are we skipping Strava Wrapped?",
+    "What's in the news about run clubs right now?",
+  ];
+
 /** Where the Learning page has got to. The snapshot carries the state before
  *  feedback, after feedback, and after the new weights are adopted, so the
  *  loop stays interactive without a backend to post to. */
@@ -347,6 +429,56 @@ const relearned = () => learningPhase === "applied";
 
 function missingTrend(trendId: string): never {
   throw new Error(`No snapshot data for trend "${trendId}"`);
+}
+
+/** Normalised so "Why is Kofi ranked first?" and "why is kofi ranked first"
+ *  reach the same saved answer. */
+function askKey(question: string): string {
+  return question.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+}
+
+/** Ask always tries a real endpoint first.
+ *
+ * It exists locally (FastAPI) and on the deployed site (a serverless
+ * function), and 404s inside the published artifact — so one build behaves
+ * correctly in all three places without being told which it is in. Only when
+ * there is no endpoint does it fall back to the saved answers, and a question
+ * with no saved answer says so rather than inventing one.
+ */
+async function askAnywhere(question: string, trendId?: string): Promise<AskAnswer> {
+  // A page opened straight from disk has no origin to call, and probing anyway
+  // just prints a CORS failure into the console of whoever is looking.
+  const canReachEndpoint =
+    typeof window === "undefined" || window.location.protocol !== "file:";
+
+  try {
+    if (!canReachEndpoint) throw new Error("no endpoint on file://");
+    const res = await fetch(`${BASE}/ask`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      // `context` is only read by the serverless deployment, which has no
+      // engine behind it and needs the run described to it. The local API
+      // builds its own from the live engine and ignores this.
+      body: JSON.stringify({ question, trend_id: trendId, context: askContext(trendId) }),
+    });
+    if (res.ok) return (await res.json()) as AskAnswer;
+  } catch {
+    // no endpoint here — fall through to the saved answers
+  }
+
+  const baked = snapshot?.ask;
+  const hit = baked?.answers[askKey(question)];
+  if (hit) return { ...hit, source: "saved" };
+  return {
+    text:
+      "That one is not in the saved answers for this demo. Run the project " +
+      "locally with a Gemini key and the same box answers live, searching the " +
+      "web where it needs to.",
+    citations: [],
+    searched: false,
+    source: "unavailable",
+    suggestions: baked?.suggestions ?? [],
+  };
 }
 
 const staticApi = {
@@ -393,6 +525,7 @@ const staticApi = {
     learningPhase = "base";
     return settle({ ok: true });
   },
+  ask: askAnywhere,
 };
 
 // ---- endpoints ---------------------------------------------------------
@@ -425,6 +558,7 @@ const liveApi = {
     post<{ ok: boolean; state: LearningState }>("/learning/observe", payload),
   applyLearning: () => post<{ ok: boolean }>("/learning/apply"),
   resetLearning: () => post<{ ok: boolean }>("/learning/reset"),
+  ask: askAnywhere,
 };
 
 export const api = (snapshot ? staticApi : liveApi) as typeof liveApi;

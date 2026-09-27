@@ -28,6 +28,7 @@ frontend/demo.html
 frontend/demo-standalone.html
 frontend/demo-v2.html
 frontend/demo-standalone-v2.html
+frontend/dist/
 
 # editors and os
 .DS_Store

@@ -22,7 +22,13 @@ import numpy as np
 
 from app.models.brief import BrandProfile, CampaignBrief
 from app.models.campaign import PastCampaign
-from app.models.creator import Creator, CreatorOpportunityScore, Provenance, SignalScore
+from app.models.creator import (
+    Creator,
+    CreatorOpportunityScore,
+    CreatorVideo,
+    Provenance,
+    SignalScore,
+)
 from app.models.trend import Trend
 from app.providers.base import AnalyticsProvider, GeminiProvider
 
@@ -349,12 +355,26 @@ def _rank(scores: list[CreatorOpportunityScore]) -> None:
             s.headline = s.tier
 
 
+def top_matching_videos(trend: Trend, creator: Creator, limit: int = 3) -> list[CreatorVideo]:
+    """This creator's best-performing videos that actually mention the trend.
+
+    Shared with the API layer, which shows them to the brand as the evidence
+    behind the content-fit score. Falls back to their most-watched videos when
+    nothing matches, so the panel is never empty — a creator with no coverage
+    of the trend is exactly the case a brand wants to see for themselves.
+    """
+    terms = [t.lower() for t in trend.query_terms]
+    hits = [v for v in creator.videos if any(t in v.text().lower() for t in terms)]
+    if not hits:
+        hits = list(creator.videos)
+    return sorted(hits, key=lambda v: v.views, reverse=True)[:limit]
+
+
 def _top_matching_videos(trend: Trend, creator: Creator, limit: int = 3) -> list[str]:
     terms = [t.lower() for t in trend.query_terms]
-    hits = [
-        v for v in creator.videos if any(t in v.text().lower() for t in terms)
-    ]
-    hits.sort(key=lambda v: v.views, reverse=True)
-    if not hits:
+    if not any(any(t in v.text().lower() for t in terms) for v in creator.videos):
         return ["no videos in the sampled catalogue mention this trend"]
-    return [f'"{v.title}" — {v.views:,} views ({v.published_at})' for v in hits[:limit]]
+    return [
+        f'"{v.title}" — {v.views:,} views ({v.published_at})'
+        for v in top_matching_videos(trend, creator, limit)
+    ]

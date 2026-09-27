@@ -17,6 +17,12 @@ Google hackathon. It runs a continuous loop over Google and YouTube signals:
 | **04** | Optimize | What is the best mix? | **Portfolio** maximising coverage per dollar |
 | **05** | Learn | What improves next time? | Re-weighted model, from real outcomes |
 
+Alongside the loop, an **Ask Gemini** panel answers free-form questions. The
+engine's current state and Google Search grounding go into one call, so
+"why is this creator ranked first?" is answered from the scoring and "what's in
+the news about run clubs?" is searched with citations — through the same box,
+with no routing between them.
+
 ## See it
 
 **[Open the demo →](https://claude.ai/artifact/9yiTUctS3QZN6uGKfjQaQH)** ·
@@ -24,9 +30,13 @@ Google hackathon. It runs a continuous loop over Google and YouTube signals:
 
 Two presentations of the same engine, for the team to choose between. The
 second is the same data and the same charts in plain language, styled after
-YouTube's own interface, with every technical figure moved behind a
-*Show the working* disclosure. Build either with `npm run build:demo` or
+YouTube's own interface, with every technical figure behind a *Show the
+working* disclosure — plus an **Ask Gemini** panel, creator avatars and their
+real video cards. Build either with `npm run build:demo` or
 `npm run build:demo:v2` in `frontend/`.
+
+To put it somewhere judges can use it, with a genuinely live Gemini box and no
+credit card anywhere, see **[DEPLOY.md](DEPLOY.md)**.
 
 Both are hosted snapshots of one full run: all six screens, real charts, real
 numbers, nothing to install. Every figure was computed by the engine — the

@@ -33,6 +33,7 @@ class CreatorVideo(BaseModel):
     likes: int = 0
     comments: int = 0
     duration_seconds: int = 0
+    thumbnail_url: str | None = None
 
     def text(self) -> str:
         return " ".join([self.title, self.description, " ".join(self.tags)])
@@ -63,6 +64,10 @@ class Creator(BaseModel):
     sample_comments: list[str] = Field(default_factory=list)
     base_cpm_usd: float = 25.0
     analytics_connected: bool = False
+    # Real channel art in live mode. Left unset for the seeded creators, who
+    # are fictional people — the console draws a generated avatar instead of
+    # inventing a photograph of someone who does not exist.
+    thumbnail_url: str | None = None
 
     @property
     def engagement_rate(self) -> float:

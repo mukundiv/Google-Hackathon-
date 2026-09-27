@@ -7,7 +7,8 @@ from fastapi import APIRouter, HTTPException
 from app import services
 from app.demo import default_brief
 from app.engine.listen import ScoutedOpportunity
-from app.schemas import BriefRequest
+from app.providers.registry import get_providers
+from app.schemas import AskRequest, AskResponse, BriefRequest
 
 router = APIRouter(prefix="/api", tags=["engine"])
 
@@ -66,6 +67,7 @@ def score_creators_route(req: BriefRequest):
         raise HTTPException(status_code=404, detail=f"unknown trend {req.trend_id}")
     scores = services.run_match(brief, trend)
     from app.data.loader import seed_creators
+    from app.engine.match import top_matching_videos
 
     creators = {c.id: c for c in seed_creators()}
     return {
@@ -78,11 +80,52 @@ def score_creators_route(req: BriefRequest):
                 "archetype": creators[s.creator_id].archetype,
                 "handle": creators[s.creator_id].handle,
                 "avg_views": creators[s.creator_id].avg_views,
+                "thumbnail_url": creators[s.creator_id].thumbnail_url,
                 "reach_relevance_delta": s.reach_relevance_delta,
+                # What this creator actually makes about this trend. It is the
+                # evidence behind the content-fit signal, so it belongs next to
+                # the score rather than buried in a tooltip.
+                "top_videos": [
+                    {
+                        "id": v.id,
+                        "title": v.title,
+                        "views": v.views,
+                        "published_at": v.published_at.isoformat(),
+                        "duration_seconds": v.duration_seconds,
+                        "thumbnail_url": v.thumbnail_url,
+                    }
+                    for v in top_matching_videos(trend, creators[s.creator_id], limit=3)
+                ],
             }
             for s in sorted(scores, key=lambda s: s.rank)
         ],
     }
+
+
+@router.post("/ask", response_model=AskResponse)
+def ask(req: AskRequest):
+    """Ask Gemini about this campaign or about the world.
+
+    The engine's state and the web-search tool go in together and the model
+    decides which it needs — so "why is this creator first?" is answered from
+    the scoring and "what's in the news about run clubs?" is searched, through
+    one endpoint.
+    """
+    brief = default_brief()
+    try:
+        run = services.run_full(brief, trend_id=req.trend_id)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    context = services.build_ask_context(run)
+    answer = get_providers().gemini.ask(req.question, context)
+    return AskResponse(
+        text=answer.text,
+        citations=list(answer.citations),
+        searched=answer.searched,
+        source=answer.source,
+        suggestions=list(answer.suggestions),
+    )
 
 
 @router.post("/portfolio")

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { api, isStaticDemo } from "../lib/api";
+import { AskPanel, GeminiGlyph } from "./AskPanel";
 import { Chip } from "./ui";
 
 /** Steps named as questions, so the rail tells you what the tool does before
@@ -66,6 +67,7 @@ function SourceChips() {
 }
 
 export function LayoutV2() {
+  const [askOpen, setAskOpen] = useState(false);
   return (
     <div className="min-h-screen">
       <header
@@ -89,6 +91,15 @@ export function LayoutV2() {
           </span>
         </div>
         <div className="flex shrink-0 items-center gap-2">
+          <button
+            onClick={() => setAskOpen(true)}
+            className="v2-pill inline-flex items-center gap-1.5 px-3 py-1.5 text-[13px] font-medium"
+            style={{ background: "var(--brand)", color: "var(--on-brand)" }}
+          >
+            <GeminiGlyph size={15} />
+            <span className="hidden sm:inline">Ask Gemini</span>
+            <span className="sm:hidden">Ask</span>
+          </button>
           <SourceChips />
           <ThemeToggle />
         </div>
@@ -142,6 +153,8 @@ export function LayoutV2() {
           </div>
         </main>
       </div>
+
+      <AskPanel open={askOpen} onClose={() => setAskOpen(false)} />
     </div>
   );
 }

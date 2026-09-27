@@ -15,7 +15,7 @@ from app.data.loader import seed_trends
 from app.models.brief import BrandProfile, CampaignBrief
 from app.models.creator import Creator
 from app.models.trend import Trend
-from app.providers.base import Judgement
+from app.providers.base import Answer, Judgement
 
 POSITIVE_MARKERS = {
     "love", "great", "best", "amazing", "useful", "helpful", "exactly", "changed",
@@ -130,6 +130,106 @@ class MockGeminiProvider:
             confidence=0.55,
         )
 
+    def ask(self, question: str, context: dict) -> Answer:
+        """Answer from the engine's own state, with no model behind it.
+
+        These are not canned strings: each branch reads the live context that
+        was passed in, so the answers stay true if the underlying run changes.
+        What it cannot do is search the web — that needs the live provider, and
+        it says so rather than improvising.
+        """
+        q = question.lower()
+        trend = context.get("trend", {})
+        creators = context.get("creators", [])
+        portfolio = context.get("portfolio", {})
+
+        def named(ids: list[str]) -> str:
+            return ", ".join(ids[:-1]) + " and " + ids[-1] if len(ids) > 1 else "".join(ids)
+
+        if any(w in q for w in ("avoid", "not use", "skip creator", "reject", "safety")):
+            flagged = [c for c in creators if c.get("brand_safety_flag")]
+            weak = [c for c in creators if c.get("composite", 0) < 45][:3]
+            parts = []
+            if flagged:
+                parts.append(
+                    f"{named([c['name'] for c in flagged])} "
+                    f"{'are' if len(flagged) > 1 else 'is'} held back for a brand-safety review — "
+                    f"{flagged[0].get('brand_safety_note', 'content that breaks the brand rules')}."
+                )
+            if weak:
+                parts.append(
+                    "On fit alone the weakest candidates are "
+                    + named([f"{c['name']} ({c['composite']:.0f})" for c in weak])
+                    + " — large audiences, but little standing in this topic."
+                )
+            return Answer(text=" ".join(parts) or "Nothing is currently flagged.",
+                          source="engine", suggestions=SUGGESTED_QUESTIONS)
+
+        if any(w in q for w in ("rank", "why is", "why did", "first", "top creator", "best")):
+            top = creators[0] if creators else None
+            if top:
+                sig = ", ".join(
+                    f"{s['label'].lower()} {s['score']:.0f}" for s in top.get("signals", [])[:3]
+                )
+                return Answer(
+                    text=(
+                        f"{top['name']} comes first on {top['composite']:.0f} out of 100. "
+                        f"The signals doing the work are {sig}. "
+                        f"They have {top['subscribers']:,} subscribers — well short of the largest "
+                        "channel in the pool, which is the point: the score measures whether they "
+                        "can credibly own this topic, not how many people follow them."
+                    ),
+                    source="engine", suggestions=SUGGESTED_QUESTIONS,
+                )
+
+        if any(w in q for w in ("skip", "pass", "strava", "why not")):
+            return Answer(
+                text=(
+                    "A trend is skipped when it stops mattering before this brand could ship. "
+                    f"Activation takes {context.get('activation_lead_days', 9)} days here, so any "
+                    "trend with less life left than that is a trap — the work would land after the "
+                    "moment passed. Strava Wrapped has already peaked, so its remaining window is "
+                    "negative."
+                ),
+                source="engine", suggestions=SUGGESTED_QUESTIONS,
+            )
+
+        if any(w in q for w in ("budget", "spend", "money", "twice", "double", "portfolio", "mix")):
+            return Answer(
+                text=(
+                    f"The recommended mix spends ${portfolio.get('spend', 0):,.0f} across "
+                    f"{portfolio.get('size', 0)} creators, holding duplicate audience at "
+                    f"{portfolio.get('overlap_pct', 0):.0f}% against "
+                    f"{portfolio.get('naive_overlap_pct', 0):.0f}% for the obvious picks. "
+                    "More budget would buy further down the fit ranking, and the optimiser would "
+                    "keep favouring creators who reach people the others miss over higher-scoring "
+                    "creators who overlap."
+                ),
+                source="engine", suggestions=SUGGESTED_QUESTIONS,
+            )
+
+        if any(w in q for w in ("window", "timing", "how long", "when", "time")):
+            return Answer(
+                text=(
+                    f"{trend.get('name', 'This trend')} stays relevant for about "
+                    f"{trend.get('ttl_days', 0):.0f} more days. Activation takes "
+                    f"{context.get('activation_lead_days', 9)}, which leaves "
+                    f"{trend.get('capture_window_days', 0):.0f} days of usable window. "
+                    f"{trend.get('rationale', '')}"
+                ),
+                source="engine", suggestions=SUGGESTED_QUESTIONS,
+            )
+
+        return Answer(
+            text=(
+                "Searching the web needs a live Gemini key — this instance is running on saved "
+                "data, so it can only answer from the engine's own output. Try asking why a "
+                "creator is ranked where they are, why a trend was skipped, or how the budget "
+                "is split."
+            ),
+            source="unavailable", suggestions=SUGGESTED_QUESTIONS,
+        )
+
     def write_recommendation(self, context: dict) -> str:
         verdict = context.get("verdict", "ACT")
         trend = context.get("trend_name", "this opportunity")
@@ -151,6 +251,16 @@ class MockGeminiProvider:
             f"${spend:,.0f}, chosen to cover the target audience without paying "
             f"twice for the same viewers."
         )
+
+
+SUGGESTED_QUESTIONS = [
+    "What's in the news about run clubs right now?",
+    "Why is this creator ranked first?",
+    "Which creators should we avoid, and why?",
+    "Why are we skipping Strava Wrapped?",
+    "What would change if we had twice the budget?",
+    "Who are our competitors working with?",
+]
 
 
 def _words(text: str) -> list[str]:

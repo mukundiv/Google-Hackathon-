@@ -14,6 +14,7 @@ Run with the API up:
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -106,6 +107,38 @@ def main() -> int:
 
     # Leave the running instance as it was found.
     client.post(f"{API}/learning/reset").raise_for_status()
+
+    # Bake the Ask panel's answers. The published artifact has no backend, so
+    # without these the panel would be a dead box; with them a judge can still
+    # interrogate the recommendation. Anything not baked says so rather than
+    # inventing an answer.
+    print("baking Ask Gemini answers")
+
+    def ask_key(q: str) -> str:
+        return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", "", q.lower())).strip()
+
+    questions = [
+        "Why is this creator ranked first?",
+        "Which creators should we avoid, and why?",
+        "Why are we skipping Strava Wrapped?",
+        "What would change if we had twice the budget?",
+        "How long do we have to act?",
+        "What's in the news about run clubs right now?",
+        "Why not just pick the biggest channels?",
+        "How is the budget split?",
+    ]
+    answers = {}
+    for q in questions:
+        a = client.post(f"{API}/ask", json={"question": q}).json()
+        answers[ask_key(q)] = {
+            "text": a["text"],
+            "citations": a.get("citations", []),
+            "searched": a.get("searched", False),
+            "source": a.get("source", "engine"),
+            "suggestions": [],
+        }
+        print(f"  {q}")
+    snapshot["ask"] = {"suggestions": questions[:4], "answers": answers}
 
     snapshot["meta"] = {
         "captured_from": API,

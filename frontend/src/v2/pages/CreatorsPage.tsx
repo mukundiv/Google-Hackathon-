@@ -5,6 +5,7 @@ import { api, type CreatorScore } from "../../lib/api";
 import { fmtCompact, fmtUsd } from "../../lib/format";
 import { useSelection } from "../../state";
 import { ReachRelevanceChart } from "../../components/charts/ReachRelevanceChart";
+import { Avatar, VideoStrip } from "../CreatorVisuals";
 import {
   Answer,
   Bar,
@@ -29,28 +30,19 @@ const SIGNAL_LABEL: Record<string, string> = {
   proven_performance: "Past results with you",
 };
 
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((p) => p[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
-
 function CreatorCard({ s, rank }: { s: CreatorScore; rank: number }) {
   const [open, setOpen] = useState(false);
   const lost = (s.reach_relevance_delta ?? 0) <= -6;
   return (
     <div className="rounded-xl bg-surface ring-1 ring-hairline" style={{ borderRadius: "var(--radius-card)" }}>
       <div className="flex items-start gap-3 p-4">
-        <span
-          aria-hidden="true"
-          className="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[14px] font-medium"
-          style={{ background: "var(--surface-2)", color: "var(--text-secondary)" }}
-        >
-          {initials(s.creator_name)}
-        </span>
+        <Avatar
+          name={s.creator_name}
+          id={s.creator_id}
+          src={s.thumbnail_url}
+          size={44}
+          ring={rank === 1 ? "var(--brand)" : undefined}
+        />
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-[15px] font-medium">{s.creator_name}</span>
@@ -104,7 +96,10 @@ function CreatorCard({ s, rank }: { s: CreatorScore; rank: number }) {
                   <Bar value={sig.score} />
                 </div>
                 <p className="mt-1 text-[12px] leading-snug text-ink-2">{sig.rationale}</p>
-                {sig.evidence.length > 0 && (
+                {/* Content fit's evidence is the creator's videos, which the
+                    cards below show properly — listing the same three titles
+                    as text first just says everything twice. */}
+                {sig.name !== "content_fit" && sig.evidence.length > 0 && (
                   <ul className="mt-1 list-disc space-y-0.5 pl-4 text-[11px] text-muted">
                     {sig.evidence.slice(0, 3).map((e, i) => (
                       <li key={i}>{e}</li>
@@ -113,6 +108,9 @@ function CreatorCard({ s, rank }: { s: CreatorScore; rank: number }) {
                 )}
               </div>
             ))}
+            {s.top_videos && s.top_videos.length > 0 && (
+              <VideoStrip videos={s.top_videos} seed={s.creator_id} />
+            )}
             {s.sentiment_positive_pct != null && (
               <p className="text-[12px] text-ink-2">
                 <strong className="font-medium">

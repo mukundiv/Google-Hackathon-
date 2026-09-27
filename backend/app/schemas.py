@@ -45,3 +45,16 @@ class HealthResponse(BaseModel):
     weights_version: str
     activation_lead_days: float
     campaigns_in_ledger: int
+
+
+class AskRequest(BaseModel):
+    question: str = Field(min_length=1, max_length=500)
+    trend_id: str | None = None
+
+
+class AskResponse(BaseModel):
+    text: str
+    citations: list[dict] = Field(default_factory=list)
+    searched: bool = False
+    source: str = "gemini"
+    suggestions: list[str] = Field(default_factory=list)

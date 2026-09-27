@@ -17,6 +17,22 @@ from app.models.trend import MomentumPoint, Trend
 
 
 @dataclass
+class Answer:
+    """A reply to a free-form question, with whatever it was grounded in.
+
+    `searched` records whether Gemini actually went to the web for this one,
+    so the console can show the citations panel only when there is something
+    to show and never imply sourcing that did not happen.
+    """
+
+    text: str
+    citations: list = field(default_factory=list)
+    searched: bool = False
+    source: str = "gemini"
+    suggestions: list[str] = field(default_factory=list)
+
+
+@dataclass
 class Judgement:
     """A qualitative assessment with its reasoning attached. Gemini returns
     these for the signals that need synthesis rather than arithmetic."""
@@ -67,6 +83,17 @@ class GeminiProvider(Protocol):
 
     def write_recommendation(self, context: dict) -> str:
         """The plain-language 'here is what to do' for the decision output."""
+        ...
+
+    def ask(self, question: str, context: dict) -> Answer:
+        """Answer a free-form question about the market or about this run.
+
+        One call covers both jobs: the engine's current state goes in as
+        context and web search is available, so the model answers from the
+        recommendation when the question is about the recommendation and
+        searches when the question is about the world. Routing it ourselves
+        would only get in the way.
+        """
         ...
 
 

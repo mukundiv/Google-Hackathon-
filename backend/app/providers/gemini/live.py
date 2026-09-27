@@ -26,7 +26,7 @@ from app.config import Settings
 from app.models.brief import BrandProfile, CampaignBrief
 from app.models.creator import Creator
 from app.models.trend import LifecycleStage, Trend, TrendCitation
-from app.providers.base import Judgement
+from app.providers.base import Answer, Judgement
 from app.providers.gemini.mock import MockGeminiProvider
 from app.store import cache_get, cache_get_stale, cache_set
 
@@ -223,6 +223,63 @@ class LiveGeminiProvider:
         except Exception:
             log.warning("live recommendation failed; falling back", exc_info=True)
             return self._fallback.write_recommendation(context)
+
+    def ask(self, question: str, context: dict) -> Answer:
+        """One call, two jobs.
+
+        The engine's current state goes in as context and the Google Search
+        tool is enabled, so the model searches when the question is about the
+        world and answers from the recommendation when it is about the
+        recommendation. Classifying the question ourselves first would only
+        get it wrong on the interesting cases — "who else is targeting this
+        audience?" needs both.
+        """
+        key = f"gemini:ask:{hash((question.strip().lower(), json.dumps(context, sort_keys=True, default=str)))}"
+        cached = cache_get(key)
+        if cached is not None:
+            return Answer(**cached)
+
+        prompt = (
+            "You are the analyst inside a creator-marketing decision tool, talking to a "
+            "brand marketer. Answer their question in at most four sentences, plainly, no "
+            "preamble and no bullet points.\n\n"
+            "If the question is about this campaign, answer from the engine state below and "
+            "quote its actual numbers. If it is about the outside world — news, competitors, "
+            "what is happening in culture — search for it. If it needs both, do both.\n\n"
+            f"Engine state:\n{json.dumps(context, indent=2, default=str)}\n\n"
+            f"Question: {question.strip()}"
+        )
+
+        try:
+            from google.genai import types
+
+            response = self.client.models.generate_content(
+                model=self.settings.gemini_grounded_model,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    tools=[types.Tool(google_search=types.GoogleSearch())],
+                    temperature=0.3,
+                    max_output_tokens=600,
+                ),
+            )
+            text = (response.text or "").strip()
+            if not text:
+                raise ValueError("empty answer")
+            citations = _citations_from(response)
+            answer = Answer(
+                text=text,
+                citations=[c.model_dump(mode="json") for c in citations],
+                searched=bool(citations),
+                source="gemini_live",
+            )
+            cache_set(key, answer.__dict__)
+            return answer
+        except Exception:
+            log.warning("live ask failed; falling back", exc_info=True)
+            stale = cache_get_stale(key)
+            if stale is not None:
+                return Answer(**stale)
+            return self._fallback.ask(question, context)
 
     # -- shared ---------------------------------------------------------
     def _judge(self, cache_key: str, prompt: str, confidence: float, fallback) -> Judgement:

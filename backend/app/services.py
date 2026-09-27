@@ -172,6 +172,69 @@ def run_portfolio(
     return _cache[key]
 
 
+def build_ask_context(run: "FullRun") -> dict:
+    """A compact picture of this run, small enough to sit in a prompt.
+
+    Deliberately trimmed: the full run carries forty scored creators with every
+    signal's evidence, which would crowd out the question itself.
+    """
+    chosen = run.chosen
+    ranked = sorted(run.scores, key=lambda s: s.rank)[:6]
+    return {
+        "brand": run.brief.brand_name,
+        "product": run.brief.product,
+        "audience": (
+            f"{'/'.join(run.brief.audience.genders)} {run.brief.audience.age_min}-"
+            f"{run.brief.audience.age_max} in {'/'.join(run.brief.audience.geos)}"
+        ),
+        "budget_usd": run.brief.budget_usd,
+        "activation_lead_days": chosen.window.activation_lead_days,
+        "trend": {
+            "name": chosen.trend.name,
+            "what_it_is": chosen.trend.description,
+            "verdict": chosen.window.verdict.value,
+            "stage": chosen.window.stage.value,
+            "ttl_days": chosen.window.ttl_days,
+            "capture_window_days": chosen.window.capture_window_days,
+            "rationale": chosen.window.rationale,
+            "creator_supply": chosen.creator_supply_note,
+        },
+        "rejected_trends": [
+            {"name": o.trend.name, "verdict": o.window.verdict.value,
+             "window_days": o.window.capture_window_days}
+            for o in run.opportunities
+            if o.window.verdict.value == "PASS"
+        ],
+        "creators": [
+            {
+                "name": s.creator_name,
+                "composite": s.composite,
+                "rank": s.rank,
+                "rank_by_reach": s.rank_by_reach,
+                "subscribers": s.subscribers,
+                "cost_usd": s.estimated_cost_usd,
+                "brand_safety_flag": s.brand_safety_flag,
+                "brand_safety_note": s.brand_safety_note,
+                "signals": [
+                    {"label": sig.label, "score": sig.score, "why": sig.rationale}
+                    for sig in s.signals
+                ],
+            }
+            for s in ranked
+        ],
+        "portfolio": {
+            "size": len(run.portfolio.optimized.members),
+            "spend": run.portfolio.optimized.total_cost_usd,
+            "members": [m.creator_name for m in run.portfolio.optimized.members],
+            "overlap_pct": run.portfolio.optimized.overlap_pct,
+            "naive_overlap_pct": run.portfolio.naive.overlap_pct,
+            "coverage_pct": run.portfolio.optimized.coverage_pct,
+            "people_reached": run.portfolio.optimized.deduplicated_reach,
+        },
+        "recommendation": run.recommendation,
+    }
+
+
 @dataclass
 class FullRun:
     brief: CampaignBrief

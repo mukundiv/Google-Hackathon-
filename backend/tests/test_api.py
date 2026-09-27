@@ -118,3 +118,43 @@ def test_applied_weights_are_not_reported_as_pending(client):
     assert after["pending_change"] is False
 
     client.post("/api/learning/reset")
+
+
+def test_ask_answers_from_the_engine_state(client):
+    """The panel must answer about this run, not in generalities."""
+    body = client.post("/api/ask", json={"question": "Why is this creator ranked first?"}).json()
+    assert body["source"] == "engine"
+    assert "Kofi Mensah" in body["text"]
+    assert body["suggestions"]
+
+
+def test_ask_is_honest_when_it_cannot_search(client):
+    """Without a live key there is no web search, and saying so is the only
+    acceptable answer — inventing news would be worse than refusing."""
+    body = client.post("/api/ask", json={"question": "What is in the news today?"}).json()
+    assert body["source"] == "unavailable"
+    assert body["searched"] is False
+    assert "live gemini key" in body["text"].lower()
+
+
+def test_ask_explains_a_rejected_trend(client):
+    body = client.post("/api/ask", json={"question": "Why are we skipping Strava Wrapped?"}).json()
+    assert "activation" in body["text"].lower() or "ship" in body["text"].lower()
+
+
+def test_ask_rejects_an_empty_or_oversized_question(client):
+    assert client.post("/api/ask", json={"question": ""}).status_code == 422
+    assert client.post("/api/ask", json={"question": "x" * 501}).status_code == 422
+
+
+def test_scores_carry_video_evidence_and_a_thumbnail_field(client):
+    body = client.post(
+        "/api/creators/score", json={"trend_id": "trend-social-running-clubs"}
+    ).json()
+    top = body["scores"][0]
+    assert "thumbnail_url" in top, "the UI needs the field even when it is null"
+    videos = top["top_videos"]
+    assert 1 <= len(videos) <= 3
+    for v in videos:
+        assert v["title"] and v["views"] > 0 and v["published_at"]
+    assert videos == sorted(videos, key=lambda v: -v["views"])
